@@ -1,0 +1,52 @@
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Avatar } from '@ui-component-lib/ui';
+
+const meta: Meta<typeof Avatar> = {
+    title: 'Primitives/Avatar',
+    component: Avatar,
+    tags: ['autodocs'],
+};
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+    args: {
+        src: 'https://github.com/shadcn.png',
+        alt: 'User avatar',
+        fallback: 'CN'
+    }
+};
+
+export const Fallback: Story = {
+    args: {
+        src: 'https://broken-url.ru',
+        alt: 'Cristiano Ronaldo',
+        fallback: 'CR'
+    }
+};
+
+export const Sizes: Story = {
+    render: () => {
+        return (
+            <div className='flex items-center gap-4'>
+                <Avatar src='https://github.com/shadcn.png' alt='Avatar' fallback='SM' size="sm" />
+                <Avatar src='https://github.com/shadcn.png' alt='Avatar' fallback='MD' size="md" />
+                <Avatar src='https://github.com/shadcn.png' alt='Avatar' fallback='LG' size="lg" />
+            </div>
+        );
+    }
+};
+
+export const Shapes: Story = {
+    render: () => {
+        return (
+            <div className='flex items-center gap-4'>
+                <Avatar fallback='Ci' shape="circle" />
+                <Avatar fallback='Sq' shape="square" />
+            </div>
+        );
+    }
+};

@@ -1,0 +1,1 @@
+import{D as t}from"./index-B9oWj59b.js";import"./index-ZH-6pyQh.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-jyNdYUlS.js";import"./index-DVyBTwwr.js";const e={title:"Primitives/Dialog",component:t,tags:["autodocs"]},p=[];export{p as __namedExportsOrder,e as default};

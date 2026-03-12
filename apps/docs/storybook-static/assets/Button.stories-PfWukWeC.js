@@ -1,0 +1,20 @@
+import{a as h}from"./index-B9oWj59b.js";import"./index-ZH-6pyQh.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-jyNdYUlS.js";import"./index-DVyBTwwr.js";const f={title:"Primitives/Button",component:h,tags:["autodocs"]},r={args:{children:"Button"}},a={args:{variant:"secondary",children:"Button"}},e={args:{variant:"danger",children:"Button"}},t={args:{variant:"outline",children:"Button"}};var o,s,n;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    children: 'Button'
+  }
+}`,...(n=(s=r.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};var c,i,d;a.parameters={...a.parameters,docs:{...(c=a.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    variant: "secondary",
+    children: 'Button'
+  }
+}`,...(d=(i=a.parameters)==null?void 0:i.docs)==null?void 0:d.source}}};var m,u,p;e.parameters={...e.parameters,docs:{...(m=e.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  args: {
+    variant: "danger",
+    children: 'Button'
+  }
+}`,...(p=(u=e.parameters)==null?void 0:u.docs)==null?void 0:p.source}}};var l,g,B;t.parameters={...t.parameters,docs:{...(l=t.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    variant: "outline",
+    children: 'Button'
+  }
+}`,...(B=(g=t.parameters)==null?void 0:g.docs)==null?void 0:B.source}}};const x=["Primary","Secondary","Danger","Outline"];export{e as Danger,t as Outline,r as Primary,a as Secondary,x as __namedExportsOrder,f as default};
