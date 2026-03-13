@@ -7,7 +7,7 @@ React.InputHTMLAttributes<HTMLInputElement> {
     tip?: string;
     error?: string;
     className?: string;
-    id?: string
+    id?: string; 
 } 
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(({label,tip,error, className, id, ...props}, ref) => (
