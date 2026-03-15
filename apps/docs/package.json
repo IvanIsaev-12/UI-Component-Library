@@ -1,32 +1,32 @@
 {
-  "name": "docs",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "storybook": "storybook dev -p 6006 --no-open",
-    "build": "storybook build"
-  },
-  "dependencies": {
-    "@ui-component-lib/ui": "workspace:*",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.6",
-    "@types/react-dom": "^19.0.2",
-    "storybook": "^8.6.17",
-    "@storybook/react": "^8.6.17",
-    "@storybook/react-vite": "^8.6.17",
-    "@storybook/addon-essentials": "^8.6.17",
-    "@storybook/addon-a11y": "^8.6.17",
-    "@storybook/addon-interactions": "^8.6.17",
-    "@storybook/test": "^8.6.17",
-    "vite": "^6.0.7",
-    "typescript": "^5.7.2",
-    "tailwindcss": "^4.0.0",
-    "@tailwindcss/postcss": "^4.0.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1"
-  }
+	"name": "docs",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"storybook": "storybook dev -p 6006 --no-open",
+		"build": "storybook build"
+	},
+	"dependencies": {
+		"@ui-component-lib/ui": "workspace:*",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19.0.6",
+		"@types/react-dom": "^19.0.2",
+		"storybook": "^8.6.17",
+		"@storybook/react": "^8.6.17",
+		"@storybook/react-vite": "^8.6.17",
+		"@storybook/addon-essentials": "^8.6.17",
+		"@storybook/addon-a11y": "^8.6.17",
+		"@storybook/addon-interactions": "^8.6.17",
+		"@storybook/test": "^8.6.17",
+		"vite": "^6.0.7",
+		"typescript": "^5.7.2",
+		"tailwindcss": "^4.0.0",
+		"@tailwindcss/postcss": "^4.0.0",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.5.1"
+	}
 }
