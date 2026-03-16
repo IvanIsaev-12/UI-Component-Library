@@ -24,6 +24,7 @@ export const colors = {
 		900: "#18181b",
 	},
 	danger: {
+		50: "#fef2f2",
 		100: "#fee2e2",
 		200: "#fecaca",
 		300: "#fca5a5",
@@ -35,6 +36,7 @@ export const colors = {
 		900: "#7f1d1d",
 	},
 	success: {
+		50: "#f0fdf4",
 		100: "#dcfce7",
 		200: "#bbf7d0",
 		300: "#86efac",
@@ -46,12 +48,14 @@ export const colors = {
 		900: "#14532d",
 	},
 	warning: {
+		50: "#fffbeb",
 		100: "#fef3c7",
 		200: "#fde68a",
 		300: "#fcd34d",
 		400: "#fbbf24",
 		500: "#f59e0b",
 		600: "#d97706",
+		700: "#b45309",
 		800: "#92400e",
 		900: "#78350f",
 	},

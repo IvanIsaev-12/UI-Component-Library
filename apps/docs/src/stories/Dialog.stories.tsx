@@ -8,6 +8,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
+	DialogClose,
 	Button,
 	Input,
 } from "@ui-component-lib/ui";
@@ -54,7 +55,9 @@ export const Destructive: Story = {
 					</DialogDescription>
 				</DialogHeader>
 				<DialogFooter>
-					<Button variant="outline">Cancel</Button>
+					<DialogClose asChild>
+						<Button variant="outline">Cancel</Button>
+					</DialogClose>
 					<Button variant="danger">Delete</Button>
 				</DialogFooter>
 			</DialogContent>
@@ -79,7 +82,9 @@ export const DialogWihtForm: Story = {
 					<Input label="Password" />
 				</div>
 				<DialogFooter>
-					<Button variant="outline">Cancel</Button>
+					<DialogClose asChild>
+						<Button variant="outline">Cancel</Button>
+					</DialogClose>
 					<Button variant="success">Submit</Button>
 				</DialogFooter>
 			</DialogContent>
