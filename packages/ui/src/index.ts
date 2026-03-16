@@ -4,4 +4,5 @@ export * from "./components/Input";
 export * from "./components/Avatar";
 export * from "./components/Dialog";
 export * from "./components/Spinner";
+export * from './components/Typography';
 export { cn } from "./lib/cn";

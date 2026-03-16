@@ -15,11 +15,13 @@ const spinnerVariants = cva("animate-spin", {
 	},
 });
 
-export interface SpinnerProps extends VariantProps<typeof spinnerVariants> {
+export interface SpinnerProps
+	extends VariantProps<typeof spinnerVariants>,
+		React.SVGProps<SVGSVGElement> {
 	className?: string;
 }
 
-export const Spinner = ({ size, className }: SpinnerProps) => {
+export const Spinner = ({ size, className, ...props }: SpinnerProps) => {
 	return (
 		<svg
 			className={cn(spinnerVariants({ size }), className)}
@@ -28,6 +30,7 @@ export const Spinner = ({ size, className }: SpinnerProps) => {
 			xmlns="http://www.w3.org/2000/svg"
 			role="status"
 			aria-labelledby="spinner-title"
+			{...props}
 		>
 			<title id="spinner-title">Loading</title>
 			<style>
