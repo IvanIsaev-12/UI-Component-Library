@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Typography } from "@ui-component-lib/ui";
 
 const meta: Meta<typeof Typography> = {
-	title: "Primitives/Typography",
+	title: "Typography/Typography",
 	component: Typography,
 	tags: ["autodocs"],
 };

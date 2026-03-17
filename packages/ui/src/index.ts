@@ -6,4 +6,5 @@ export * from "./components/Dialog";
 export * from "./components/Spinner";
 export * from './components/Typography';
 export * from "./components/Alert";
+export * from "./components/Card";
 export { cn } from "./lib/cn";

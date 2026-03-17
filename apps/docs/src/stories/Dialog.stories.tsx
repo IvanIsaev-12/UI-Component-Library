@@ -14,7 +14,7 @@ import {
 } from "@ui-component-lib/ui";
 
 const meta = {
-	title: "Primitives/Dialog",
+	title: "Components/Dialog",
 	component: Dialog,
 	tags: ["autodocs"],
 } satisfies Meta<typeof Dialog>;
@@ -23,7 +23,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const DialogDefault: Story = {
+export const Default: Story = {
 	render: () => (
 		<Dialog>
 			<DialogTrigger asChild>
@@ -65,7 +65,7 @@ export const Destructive: Story = {
 	),
 };
 
-export const DialogWihtForm: Story = {
+export const WithForm: Story = {
 	render: () => (
 		<Dialog>
 			<DialogTrigger asChild>
