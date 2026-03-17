@@ -14,7 +14,7 @@ describe("Badge", () => {
 		["neutral", "bg-neutral-200"],
 		["danger", "bg-danger-200"],
 	])("renders %s variant correctly", (variant, expectedClass) => {
-		render(<Badge variant={variant}>{variant}</Badge>);
+		render(<Badge variant={variant as any}>{variant}</Badge>);
 		expect(screen.getByText(variant)).toHaveClass(expectedClass);
 	});
 

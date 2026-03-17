@@ -11,7 +11,7 @@ describe("Alert", () => {
         ["danger", "bg-danger-100"]
     ])("renders the %s variant", (variant, expectedClass) => {
         render(
-            <Alert variant={variant}>
+            <Alert variant={variant as any}>
                 <AlertTitle>Alert</AlertTitle>
             </Alert>
         );

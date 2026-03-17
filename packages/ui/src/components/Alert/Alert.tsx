@@ -11,7 +11,7 @@ export const alertVariants = cva(
                 info: "bg-primary-50 text-primary-900 border-primary-300 border-l-primary-500",
                 success: "bg-success-100 text-success-900 border-success-300 border-l-success-500",
                 warning:  "bg-warning-100 text-warning-900 border-warning-300 border-l-warning-500",
-                danger:  "bg-danger-100 text-danger-900 border-danger-300 border-l-danger-500",
+                danger:  "bg-danger-100  text-danger-900 border-danger-300 border-l-danger-500",
             }
 
         },

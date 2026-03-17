@@ -7,4 +7,6 @@ export * from "./components/Spinner";
 export * from './components/Typography';
 export * from "./components/Alert";
 export * from "./components/Card";
+export * from "./components/Checkbox";
+export * from "./components/Textarea";
 export { cn } from "./lib/cn";
