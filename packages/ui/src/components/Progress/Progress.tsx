@@ -1,0 +1,62 @@
+import * as React from "react";
+import { cva, VariantProps } from "class-variance-authority";
+import { cn } from "../../lib/cn";
+
+const progressVariants = cva(
+    "w-full bg-neutral-200 rounded-full overflow-hidden",
+    {
+        variants: {
+            variant: {
+                primary: "[&>div]:bg-primary-500",
+                success: "[&>div]:bg-success-500",
+                warning: "[&>div]:bg-warning-500",
+                danger: "[&>div]:bg-danger-500",
+            },
+            size: {
+                sm: "h-1",
+                md: "h-2",
+                lg: "h-4",
+            }
+        },
+        defaultVariants: {
+            size: "md",
+            variant: "primary"
+        }
+    }
+)
+
+
+interface ProgressProps extends React.HTMLAttributes<
+    HTMLDivElement>,
+    VariantProps<typeof progressVariants> {
+    value?: number,
+    maximum?: number,
+}
+
+const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
+    ({ className, value = 0, variant, maximum = 100, size, ...props }, ref) => {
+        const percentage = Math.min(Math.max((value / maximum) * 100, 0), 100);
+        return (
+            <div
+                ref={ref}
+                className={cn(progressVariants({ size, variant }), className)}
+                role="progressbar"
+                aria-valuenow={value}
+                aria-valuemin={0}
+                aria-valuemax={maximum}
+                {...props}
+            >
+                <div
+                    className="h-full transition-all duration-300 ease-in-out"
+                    style={{ width: `${percentage}%` }}
+                />
+            </div>
+        )
+    }
+);
+
+
+Progress.displayName = "Progress";
+
+export { Progress, progressVariants };
+export type {ProgressProps};

@@ -9,4 +9,7 @@ export * from "./components/Alert";
 export * from "./components/Card";
 export * from "./components/Checkbox";
 export * from "./components/Textarea";
+export * from "./components/Accordion";
+export * from "./components/Divider";
+export * from "./components/Progress";
 export { cn } from "./lib/cn";
