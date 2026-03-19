@@ -12,4 +12,5 @@ export * from "./components/Textarea";
 export * from "./components/Accordion";
 export * from "./components/Divider";
 export * from "./components/Progress";
+export * from "./components/Radio";
 export { cn } from "./lib/cn";
