@@ -13,4 +13,6 @@ export * from "./components/Accordion";
 export * from "./components/Divider";
 export * from "./components/Progress";
 export * from "./components/Radio";
+export * from "./components/Switch";
+export * from "./components/Tooltip"
 export { cn } from "./lib/cn";
