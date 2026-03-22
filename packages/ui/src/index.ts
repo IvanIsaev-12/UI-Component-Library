@@ -14,5 +14,13 @@ export * from "./components/Divider";
 export * from "./components/Progress";
 export * from "./components/Radio";
 export * from "./components/Switch";
-export * from "./components/Tooltip"
+export * from "./components/Tooltip";
+export * from "./components/Breadcrumb";
+export * from "./components/Skeleton";
+export * from "./components/Tabs";
+export * from "./components/Popover";
+export * from "./components/Select";
+export * from "./components/Toast";
+export * from "./components/Table";
+export * from "./components/Sheet";
 export { cn } from "./lib/cn";
