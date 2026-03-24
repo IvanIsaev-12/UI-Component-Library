@@ -19,6 +19,7 @@ const buttonVariants = cva(
 				danger:
 					"bg-danger-600 text-white hover:bg-danger-700 focus-visible:ring-danger-500",
 				success: "bg-success-600 text-white hover:bg-success-700",
+				warning: "bg-warning-600 text-white hover:bg-warning-700 focus-visible:ring-warning-500",
 			},
 			size: {
 				sm: "h-8 px-3 text-xs",

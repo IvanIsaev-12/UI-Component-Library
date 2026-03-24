@@ -22,5 +22,5 @@ export * from "./components/Popover";
 export * from "./components/Select";
 export * from "./components/Toast";
 export * from "./components/Table";
-export * from "./components/Sheet";
+export * from "./components/DropdownMenu";
 export { cn } from "./lib/cn";
