@@ -34,6 +34,7 @@ const AccordionTrigger = React.forwardRef<
                 className={cn(
                     "flex flex-1 items-center justify-between py-4 w-full text-left font-medium",
                     "transition-all",
+                    "text-neutral-900 dark:text-neutral-100",
                     "[&[data-state=open]>svg]:rotate-180",
                     className
                 )}

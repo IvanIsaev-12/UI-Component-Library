@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { ToastProvider, useToast, Button } from "@ui-component-lib/ui";
 
 // Wrapper component for Storybook

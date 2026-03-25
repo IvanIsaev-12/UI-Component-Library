@@ -11,12 +11,14 @@ describe("Skeleton", () => {
 		const result = document.querySelector("div");
 		expect(result).toBeInTheDocument();
 	});
+	
 	it("renders with a custom class", () => {
-    render(<Skeleton className="h-12 w-12 rounded-full" data-testid="skeleton" />);
-    
-    const skeleton = screen.getByTestId("skeleton");
-    expect(skeleton).toHaveClass("rounded-full", "h-12", "w-12");
-});
+		render(<Skeleton className="h-12 w-12 rounded-full" data-testid="skeleton" />);
+
+		const skeleton = screen.getByTestId("skeleton");
+		expect(skeleton).toHaveClass("rounded-full", "h-12", "w-12");
+	});
+
 	it("has no a11y violations", async () => {
 		const { container } = render(
 			<div className="flex flex-col space-y-3">

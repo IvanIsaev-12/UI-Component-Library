@@ -4,14 +4,14 @@ import { cn } from "../../lib/cn";
 import { X } from "lucide-react";
 
 const toastVariants = cva(
-	"fixed bottom-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg text-white min-w-[300px] transition-all duration-300",
+	"fixed bottom-4 right-4 flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg min-w-[300px] transition-all duration-300 border",
 	{
 		variants: {
 			variant: {
-				default: "bg-primary-500",
-				success: "bg-success-500",
-				error: "bg-danger-500",
-				warning: "bg-warning-500"
+				default: "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 border-neutral-200 dark:border-neutral-700",
+				success: "bg-success-100 dark:bg-success-900 text-success-800 dark:text-success-100 border-success-200 dark:border-success-800",
+				error: "bg-danger-100 dark:bg-danger-900 text-danger-800 dark:text-danger-100 border-danger-200 dark:border-danger-800",
+				warning: "bg-warning-100 dark:bg-warning-900 text-warning-900 dark:text-warning-100 border-warning-200 dark:border-warning-800"
 			},
 			animation: {
 				enter: "animate-slide-in-right opacity-100",
@@ -52,7 +52,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 				<span className="flex-1">{message}</span>
 				<button
 					onClick={handleClose}
-					className="text-white hover:opacity-75 transition-opacity"
+					className="hover:opacity-75 transition-opacity"
 				>
 					<X className="h-4 w-4" />
 				</button>

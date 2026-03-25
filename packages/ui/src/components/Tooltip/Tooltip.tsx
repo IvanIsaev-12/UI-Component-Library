@@ -4,8 +4,8 @@ import { cn } from "../../lib/cn";
 
 const tooltipContentStyles = `
   z-50 rounded-md
-  bg-neutral-900 px-3 py-1.5
-  text-sm text-white shadow-md
+  bg-neutral-900 dark:bg-neutral-100 px-3 py-1.5
+  text-sm text-white dark:text-neutral-900 shadow-md
   animate-in fade-in-0 zoom-in-95
   data-[state=closed]:animate-out
   data-[state=closed]:fade-out-0
@@ -43,7 +43,7 @@ const TooltipContent = React.forwardRef<
         >
             {children}
             {arrow && (
-                <TooltipPrimitive.Arrow className="size-2.5 translate-y-[calc(-50%-2px)] rotate-45 rounded-[2px] bg-neutral-900 fill-neutral-900" />
+                <TooltipPrimitive.Arrow className="size-2.5 translate-y-[calc(-50%-2px)] rotate-45 rounded-[2px] bg-neutral-900 dark:bg-neutral-100 fill-neutral-900 dark:fill-neutral-100" />
             )}
         </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>

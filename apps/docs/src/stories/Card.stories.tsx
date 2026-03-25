@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@ui-component-lib/ui";
 
 const meta = {

@@ -15,8 +15,8 @@ const SelectTrigger = React.forwardRef<
 	<SelectPrimitive.Trigger
 		ref={ref}
 		className={cn(
-			"flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm",
-			"ring-offset-white placeholder:text-neutral-400",
+			"flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-3 py-2 text-sm",
+			"ring-offset-white placeholder:text-neutral-400 dark:placeholder:text-neutral-600",
 			"focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
 			"disabled:cursor-not-allowed disabled:opacity-50",
 			"[&>span]:line-clamp-1",
@@ -107,7 +107,7 @@ const SelectContent = React.forwardRef<
 		<SelectPrimitive.Content
 			ref={ref}
 			className={cn(
-				"relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md border border-neutral-200 bg-white text-neutral-950 shadow-md",
+				"relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-950 dark:text-neutral-50 shadow-md",
 				"data-[state=open]:animate-in data-[state=closed]:animate-out",
 				"data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 				"data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
@@ -156,7 +156,7 @@ const SelectItem = React.forwardRef<
 		ref={ref}
 		className={cn(
 			"relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none",
-			"focus:bg-neutral-100 focus:text-neutral-900",
+			"focus:bg-neutral-100 dark:focus:bg-neutral-700 focus:text-neutral-900 dark:focus:text-neutral-50",
 			"data-disabled:pointer-events-none data-disabled:opacity-50",
 			className
 		)}
@@ -192,7 +192,7 @@ const SelectSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<SelectPrimitive.Separator
 		ref={ref}
-		className={cn("-mx-1 my-1 h-px bg-neutral-200", className)}
+		className={cn("-mx-1 my-1 h-px bg-neutral-200 dark:bg-neutral-700", className)}
 		{...props}
 	/>
 ));

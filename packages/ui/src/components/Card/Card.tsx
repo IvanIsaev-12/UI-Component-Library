@@ -9,7 +9,7 @@ const CardTitle = ({
 }: React.HTMLAttributes<HTMLHeadingElement>) => (
 
     <h3
-        className={cn("text-lg font-semibold text-neutral-900", className)}
+        className={cn("text-lg font-semibold text-neutral-900 dark:text-neutral-50", className)}
         {...props}
     />
 );
@@ -36,7 +36,7 @@ const CardDescription = ({
 }: React.HTMLAttributes<HTMLParagraphElement>) => (
 
     <p
-        className={cn("text-sm text-neutral-600", className)}
+        className={cn("text-sm text-neutral-600 dark:text-neutral-400", className)}
         {...props}
     />
 );
@@ -75,7 +75,7 @@ const Card = ({
     ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
 
-    <div className={cn("bg-white rounded-xl border border-neutral-200 shadow-sm p-6", className)} {...props}>
+    <div className={cn("bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 shadow-sm p-6", className)} {...props}>
         {children}
     </div>
 );

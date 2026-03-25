@@ -44,7 +44,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<DialogPrimitive.Description
 		ref={ref}
-		className={cn("text-sm text-neutral-600", className)}
+		className={cn("text-sm text-neutral-600 dark:text-neutral-400", className)}
 		{...props}
 	/>
 ));
@@ -80,7 +80,7 @@ const DialogContent = React.forwardRef<
 			ref={ref}
 			className={cn(
 				"fixed left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]",
-				"bg-white border border-neutral-200 shadow-xl rounded-2xl p-6",
+				"bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-xl rounded-2xl p-6",
 				"w-[calc(100%-2rem)] sm:w-full max-w-lg",
 				"max-h-[85vh] overflow-y-auto",
 				"data-[state=open]:animate-in data-[state=closed]:animate-out",
@@ -94,10 +94,10 @@ const DialogContent = React.forwardRef<
 			<DialogPrimitive.Close
 				className={cn(
 					"absolute right-4 top-4 p-1 rounded-md",
-					"text-neutral-400 hover:text-neutral-900 hover:bg-neutral-100",
+					"text-neutral-400 dark:text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-700",
 					"opacity-70 hover:opacity-100",
 					"transition-all",
-					"focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2",
+					"focus:outline-none focus:ring-2 focus:ring-neutral-950 dark:focus:ring-neutral-300 focus:ring-offset-2",
 					"disabled:pointer-events-none"
 				)}
 				aria-label="Close"

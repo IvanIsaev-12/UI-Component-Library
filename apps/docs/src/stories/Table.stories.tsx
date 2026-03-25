@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Table, TableCaption, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow, Badge } from "@ui-component-lib/ui";
 
 const meta = {
