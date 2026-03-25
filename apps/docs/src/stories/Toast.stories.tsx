@@ -20,7 +20,6 @@ type Story = StoryObj<typeof meta>;
 const ToastDemo = ({ variant }: { variant?: "default" | "success" | "error" | "warning" }) => {
     const { displayToast } = useToast();
 
-    // Map toast variants to button variants
     const buttonVariant = variant === "error" ? "danger" : variant === "default" ? "primary" : variant;
 
     return (

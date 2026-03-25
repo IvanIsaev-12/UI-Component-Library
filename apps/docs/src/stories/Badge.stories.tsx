@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
 	args: {
 		variant: "primary",
+		className: "w-5 h-5",
 		children: "Badge",
 	},
 };

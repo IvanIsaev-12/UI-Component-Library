@@ -25,7 +25,7 @@ describe("Dialog", () => {
 				</DialogContent>
 			</Dialog>
 		);
-		await userAction.click(screen.getByText("Open"));
+		await userAction.click(screen.getByText(/open/i));
 
 		expect(screen.getByRole("dialog")).toBeInTheDocument();
 	});
@@ -42,10 +42,10 @@ describe("Dialog", () => {
 				</DialogContent>
 			</Dialog>
 		);
-		await userAction.click(screen.getByText("Open"));
+		await userAction.click(screen.getByText(/open/i));
 		expect(screen.getByRole("dialog")).toBeInTheDocument();
 
-		await userAction.click(screen.getByLabelText("Close"));
+		await userAction.click(screen.getByLabelText(/close/i));
 		expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
 	});
 

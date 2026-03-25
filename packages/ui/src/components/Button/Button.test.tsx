@@ -23,13 +23,13 @@ describe("Button", () => {
 		const button = screen.getByRole("button");
 		expect(button).toHaveAttribute("aria-busy", "true");
 		expect(button).toBeDisabled();
-		expect(screen.getByText("Loading...")).toBeInTheDocument();
+		expect(screen.getByText(/loading\.\.\./i)).toBeInTheDocument();
 	});
 
 	it("testing user events", async () => {
 		const endUser = userEvent.setup();
 		const handleClick = vi.fn();
-		render(<Button onClick={handleClick}>CLick me</Button>);
+		render(<Button onClick={handleClick}>Click me</Button>);
 		const button = screen.getByRole("button");
 		await endUser.click(button);
 		expect(handleClick).toHaveBeenCalledTimes(1);

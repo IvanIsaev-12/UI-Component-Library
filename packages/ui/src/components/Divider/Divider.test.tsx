@@ -22,7 +22,7 @@ describe("Divider", () => {
 	});
 
 	it("renders vertical orientation", () => {
-		render(<Divider orientation="veritcal" />);
+		render(<Divider orientation="vertical" />);
 
 		const divider = screen.getByRole("separator");
 		expect(divider).toHaveClass("h-full", "border-l");

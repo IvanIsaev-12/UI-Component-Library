@@ -19,10 +19,10 @@ describe("Accordion", () => {
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>
-		)
+		);
 		await userAction.click(screen.getByRole("button"));
 		expect(screen.getByText(/autonomous robot/i)).toBeVisible();
-	})
+	});
 
 	it('renders the accordion with multiple items', async () => {
 		const userAction = userEvent.setup();
@@ -45,7 +45,7 @@ describe("Accordion", () => {
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>
-		)
+		);
 		const trigger1 = screen.getByRole("button", { name: /are you a real person/i });
 		const trigger2 = screen.getByRole("button", { name: /what is hidden there/i });
 
@@ -78,7 +78,7 @@ describe("Accordion", () => {
 		
 		await userAction.keyboard("{Enter}");
 		expect(screen.queryByText(/autonomous robot/i)).not.toBeInTheDocument();
-	})
+	});
 
 	it('has no accessibility violations', async () => {
 		const { container } = render(
@@ -93,4 +93,4 @@ describe("Accordion", () => {
 		const results = await axe(container);
 		expect(results).toHaveNoViolations();
 	});
-})
+});

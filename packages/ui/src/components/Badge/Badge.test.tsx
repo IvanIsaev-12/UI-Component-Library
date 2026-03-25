@@ -5,7 +5,7 @@ import { axe } from "jest-axe";
 describe("Badge", () => {
 	it("renders a Badge", () => {
 		render(<Badge>Text</Badge>);
-		expect(screen.getByText("Text")).toBeInTheDocument();
+		expect(screen.getByText(/text/i)).toBeInTheDocument();
 	});
 
 	it.each([
@@ -15,7 +15,7 @@ describe("Badge", () => {
 		["danger", "bg-danger-200"],
 	])("renders %s variant correctly", (variant, expectedClass) => {
 		render(<Badge variant={variant as any}>{variant}</Badge>);
-		expect(screen.getByText(variant)).toHaveClass(expectedClass);
+		expect(screen.getByText(new RegExp(variant, "i"))).toHaveClass(expectedClass);
 	});
 
 	it("has no a11y violations", async () => {

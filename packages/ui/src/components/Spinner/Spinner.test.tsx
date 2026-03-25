@@ -9,7 +9,7 @@ describe("Spinner", () => {
         expect(spinner).toBeInTheDocument();
     });
 
-    it("has a role 'status' ", () => {
+    it("has a role 'status'", () => {
         render(<Spinner />);
         expect(screen.getByRole("status")).toBeInTheDocument();
     });

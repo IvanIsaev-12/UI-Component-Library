@@ -12,7 +12,7 @@ describe("Card", () => {
 		["Card Footer", <CardFooter>Footer</CardFooter>, "Footer"]
 	])("render %s", (_name, component, text) => {
 		render(<Card>{component}</Card>);
-		expect(screen.getByText(text)).toBeInTheDocument();
+		expect(screen.getByText(new RegExp(text, "i"))).toBeInTheDocument();
 	});
 
 	it("renders complete Card structure", () => {
@@ -27,10 +27,10 @@ describe("Card", () => {
 			</Card>
 		);
 
-		expect(screen.getByText("Test Title")).toBeInTheDocument();
-		expect(screen.getByText("Test Description")).toBeInTheDocument();
-		expect(screen.getByText("Test Content")).toBeInTheDocument();
-		expect(screen.getByText("Test Footer")).toBeInTheDocument();
+		expect(screen.getByText(/test title/i)).toBeInTheDocument();
+		expect(screen.getByText(/test description/i)).toBeInTheDocument();
+		expect(screen.getByText(/test content/i)).toBeInTheDocument();
+		expect(screen.getByText(/test footer/i)).toBeInTheDocument();
 	});
 
 

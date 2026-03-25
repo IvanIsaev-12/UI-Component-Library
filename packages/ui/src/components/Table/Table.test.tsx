@@ -127,7 +127,7 @@ describe("Table", () => {
 
 		const footer = screen.getByText(/average salary/i);
 		expect(footer).toBeInTheDocument();
-		expect(screen.getByText("$96,250")).toBeInTheDocument();
+		expect(screen.getByText(/\$96,250/i)).toBeInTheDocument();
 	});
 
 	it("has no a11y violations", async () => {

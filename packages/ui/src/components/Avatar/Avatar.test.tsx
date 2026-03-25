@@ -13,7 +13,7 @@ describe("Avatar", () => {
 		render(
 			<Avatar alt="Segnor" src="https://i.pravatar.cc/150" fallback="SR" />
 		);
-		expect(screen.getByText("SR")).toBeInTheDocument();
+		expect(screen.getByText(/sr/i)).toBeInTheDocument();
 	});
 
 	it.each([
@@ -22,7 +22,7 @@ describe("Avatar", () => {
 		["lg", "h-14"],
 	])("renders the %s size", (size, expectedClass) => {
 		render(<Avatar fallback="CR7" size={size as any} />);
-		const fallback = screen.getByText("CR7");
+		const fallback = screen.getByText(/cr7/i);
 		expect(fallback.parentElement?.className).toContain(expectedClass);
 	});
 

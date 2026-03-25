@@ -37,10 +37,9 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 
 		const handleClose = () => {
 			setIsExiting(true);
-			// Wait for animation to complete before calling onClose
 			setTimeout(() => {
 				onClose();
-			}, 300); // Match the duration-300 in Tailwind
+			}, 300); 
 		};
 
 		return (
@@ -53,6 +52,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 				<button
 					onClick={handleClose}
 					className="hover:opacity-75 transition-opacity"
+					aria-label="Close toast"
 				>
 					<X className="h-4 w-4" />
 				</button>

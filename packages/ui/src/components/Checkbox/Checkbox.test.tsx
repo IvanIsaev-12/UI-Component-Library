@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react"
-import { Checkbox } from "./Checkbox"
+import { render, screen } from "@testing-library/react";
+import { Checkbox } from "./Checkbox";
 import { axe } from "jest-axe";
 import userEvent from "@testing-library/user-event";
 
@@ -8,7 +8,7 @@ describe("Checkbox", () => {
 
     it('renders a default checkbox', () => {
         render(<Checkbox label="Default" id='def' />);
-        expect(screen.getByLabelText("Default")).toBeInTheDocument();
+        expect(screen.getByLabelText(/default/i)).toBeInTheDocument();
     })
 
     it('renders a checkbox without label', () => {
@@ -44,7 +44,7 @@ describe("Checkbox", () => {
         const user = userEvent.setup();
         render(<Checkbox label="Click label" id="label-click" />);
         const checkbox = screen.getByRole("checkbox");
-        const label = screen.getByText("Click label");
+        const label = screen.getByText(/click label/i);
 
         expect(checkbox).not.toBeChecked();
         await user.click(label);

@@ -11,24 +11,24 @@ describe("Input", () => {
 	it("renders the label if there is one", () => {
 		render(<Input label="Create Account" />);
 
-		expect(screen.getByText("Create Account")).toBeInTheDocument();
+		expect(screen.getByText(/create account/i)).toBeInTheDocument();
 	});
 
 	it("renders with a tip", () => {
 		render(<Input tip="The password must contain at least 8 symbols" />);
 		expect(
-			screen.getByText("The password must contain at least 8 symbols")
+			screen.getByText(/the password must contain at least 8 symbols/i)
 		).toBeInTheDocument();
 	});
 
 	it("renders with an error message", () => {
 		render(<Input error="The field can't be empty" />);
-		expect(screen.getByText("The field can't be empty")).toBeInTheDocument();
+		expect(screen.getByText(/the field can't be empty/i)).toBeInTheDocument();
 	});
 
 	it("the input can be disabled", () => {
 		render(<Input disabled={true} label="Password" id="password" />);
-		const disabledInput = screen.getByLabelText("Password");
+		const disabledInput = screen.getByLabelText(/password/i);
 		expect(disabledInput).toBeDisabled();
 	});
 

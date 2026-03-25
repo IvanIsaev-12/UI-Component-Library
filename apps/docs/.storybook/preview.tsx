@@ -17,7 +17,7 @@ const preview: Preview = {
 			disable: true,
 		},
 		docs: {
-			theme: ,
+			theme: undefined,
 		},
 	},
 	decorators: [

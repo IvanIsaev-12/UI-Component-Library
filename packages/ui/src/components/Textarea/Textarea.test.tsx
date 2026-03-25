@@ -5,12 +5,12 @@ import { axe } from "jest-axe";
 describe("Textarea", () => {
     it("renders the textarea", () => {
         render(<Textarea label="Text" id="textarea" />);
-        expect(screen.getByLabelText("Text")).toBeInTheDocument();
+        expect(screen.getByLabelText(/text/i)).toBeInTheDocument();
     });
 
     it("renders with an error", () => {
         render(<Textarea error="Wrong Input!" label="Error" id="error-textarea" />);
-        expect(screen.getByLabelText("Error")).toBeInTheDocument();
+        expect(screen.getByLabelText(/error/i)).toBeInTheDocument();
     });
 
     it("has aria-invalid when there is an error", () => {
@@ -21,7 +21,7 @@ describe("Textarea", () => {
 
     it("is disabled when disabled prop is present", () => {
         render(<Textarea disabled={true} id="plain-text" label="Text" />);
-        const disabledArea = screen.getByLabelText("Text");
+        const disabledArea = screen.getByLabelText(/text/i);
         expect(disabledArea).toBeDisabled();
     });
 

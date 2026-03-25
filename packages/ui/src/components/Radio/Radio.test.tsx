@@ -37,18 +37,18 @@ describe("Radio", () => {
 		expect(radio).toBeChecked();
 	});
 
-	it("randers a radio group", async () => {
+	it("renders a radio group", async () => {
 		const user = userEvent.setup();
 		render(
 			<div>
-				<Radio name="gender" label="Female" />
-				<Radio name="gender" label="Male" />
-				<Radio name="gender" label="Other" />
+				<Radio name="gender" label="Female" id="female" />
+				<Radio name="gender" label="Male" id="male" />
+				<Radio name="gender" label="Other" id="other" />
 			</div>
 		);
 
-		const female = screen.getByRole("radio", { name: "Female" });
-		const male = screen.getByRole("radio", { name: "Male" });
+		const female = screen.getByLabelText(/female/i);
+		const male = screen.getByLabelText("Male");
 
 		await user.click(female);
 		expect(female).toBeChecked();

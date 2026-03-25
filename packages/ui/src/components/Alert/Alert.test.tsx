@@ -15,7 +15,7 @@ describe("Alert", () => {
                 <AlertTitle>Alert</AlertTitle>
             </Alert>
         );
-        const title = screen.getByText("Alert");
+        const title = screen.getByText(/alert/i);
         expect(title.parentElement?.className).toContain(expectedClass);
     });
 
