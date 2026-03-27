@@ -4,16 +4,25 @@ import { cn } from "../../lib/cn";
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 
 const switchVariants = cva(
-    "relative inline-flex items-center shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-500 data-[state=unchecked]:bg-neutral-300",
+    "relative inline-flex items-center shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=unchecked]:bg-neutral-300",
     {
         variants: {
             size: {
                 sm: "h-5 w-9 p-0.5",
                 md: "h-6 w-11 p-0.5",
                 lg: "h-8 w-14 p-1",
+            },
+            variant: {
+                primary: "data-[state=checked]:bg-primary-500 focus-visible:ring-primary-500",
+                success: "data-[state=checked]:bg-success-500 focus-visible:ring-success-500",
+                warning: "data-[state=checked]:bg-warning-500 focus-visible:ring-warning-500",
+                danger: "data-[state=checked]:bg-danger-500 focus-visible:ring-danger-500",
             }
         },
-        defaultVariants: { size: "md" }
+        defaultVariants: {
+            size: "md",
+            variant: "primary"
+        }
     }
 );
 
@@ -57,14 +66,14 @@ interface SwitchProps extends
 const Switch = React.forwardRef<
     React.ComponentRef<typeof SwitchPrimitive.Root>,
     SwitchProps>(
-        ({ className, size, ...props }, ref) => {
+        ({ className, size, variant, ...props }, ref) => {
             return (
                 <SwitchPrimitive.Root
                     ref={ref}
-                    className={cn(switchVariants({ size }), className)}
+                    className={cn(switchVariants({ size, variant }), className)}
                     {...props}
                 >
-                    <SwitchThumb 
+                    <SwitchThumb
                         size={size}
                     />
                 </SwitchPrimitive.Root>

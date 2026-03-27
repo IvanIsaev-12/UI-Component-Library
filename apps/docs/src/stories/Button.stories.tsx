@@ -33,3 +33,24 @@ export const Outline: Story = {
 		children: "Button",
 	},
 };
+
+export const Success: Story = {
+	args: {
+		variant: "success",
+		children: "Button",
+	},
+};
+
+export const Warning: Story = {
+	args: {
+		variant: "warning",
+		children: "Button",
+	},
+};
+
+export const Ghost: Story = {
+	args: {
+		variant: "ghost",
+		children: "Button",
+	},
+};

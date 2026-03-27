@@ -11,38 +11,63 @@ const SelectValue = SelectPrimitive.Value;
 const SelectTrigger = React.forwardRef<
 	React.ComponentRef<typeof SelectPrimitive.Trigger>,
 	React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-	<SelectPrimitive.Trigger
-		ref={ref}
-		className={cn(
-			"flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-3 py-2 text-sm",
-			"ring-offset-white placeholder:text-neutral-400 dark:placeholder:text-neutral-600",
-			"focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
-			"disabled:cursor-not-allowed disabled:opacity-50",
-			"[&>span]:line-clamp-1",
-			className
-		)}
-		{...props}
-	>
-		{children}
-		<SelectPrimitive.Icon asChild>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="16"
-				height="16"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				className="h-4 w-4 opacity-50"
-			>
-				<polyline points="6 9 12 15 18 9" />
-			</svg>
-		</SelectPrimitive.Icon>
-	</SelectPrimitive.Trigger>
-));
+>(({ className, children, id, ...props }, ref) => {
+	// Auto-generate ID if not provided - makes it easier to associate with labels
+	const generatedId = React.useId();
+	const triggerId = id || generatedId;
+
+	// Development-time accessibility warning
+	React.useEffect(() => {
+		// @ts-ignore - process.env is replaced at build time
+		if (typeof process !== "undefined" && process.env?.NODE_ENV === "development") {
+			const hasAriaLabel = props["aria-label"] || props["aria-labelledby"];
+
+			if (!hasAriaLabel) {
+				console.warn(
+					`SelectTrigger (id: ${triggerId}): Missing accessible label.\n` +
+					`Please add either:\n` +
+					`  1. A <label htmlFor="${triggerId}">Label</label> element, OR\n` +
+					`  2. An aria-label prop: <SelectTrigger aria-label="Your label">\n\n` +
+					`This ensures screen readers can announce the select's purpose.`
+				);
+			}
+		}
+	}, [triggerId, props["aria-label"], props["aria-labelledby"]]);
+
+	return (
+		<SelectPrimitive.Trigger
+			ref={ref}
+			id={triggerId}
+			className={cn(
+				"flex h-10 w-full items-center justify-between rounded-md border border-border bg-background px-3 py-2 text-sm",
+				"ring-offset-white placeholder:text-placeholder",
+				"focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
+				"disabled:cursor-not-allowed disabled:opacity-50",
+				"[&>span]:line-clamp-1",
+				className
+			)}
+			{...props}
+		>
+			{children}
+			<SelectPrimitive.Icon asChild>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					className="h-4 w-4 opacity-50"
+				>
+					<polyline points="6 9 12 15 18 9" />
+				</svg>
+			</SelectPrimitive.Icon>
+		</SelectPrimitive.Trigger>
+	);
+});
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
 const SelectScrollUpButton = React.forwardRef<
@@ -107,14 +132,14 @@ const SelectContent = React.forwardRef<
 		<SelectPrimitive.Content
 			ref={ref}
 			className={cn(
-				"relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-950 dark:text-neutral-50 shadow-md",
+				"relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md border border-border bg-background text-foreground shadow-md",
 				"data-[state=open]:animate-in data-[state=closed]:animate-out",
 				"data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 				"data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
 				"data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2",
 				"data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 				position === "popper" &&
-					"data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+				"data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
 				className
 			)}
 			position={position}
@@ -125,7 +150,7 @@ const SelectContent = React.forwardRef<
 				className={cn(
 					"p-1",
 					position === "popper" &&
-						"h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width)"
+					"h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width)"
 				)}
 			>
 				{children}
@@ -156,7 +181,7 @@ const SelectItem = React.forwardRef<
 		ref={ref}
 		className={cn(
 			"relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none",
-			"focus:bg-neutral-100 dark:focus:bg-neutral-700 focus:text-neutral-900 dark:focus:text-neutral-50",
+			"focus:bg-background-muted focus:text-foreground",
 			"data-disabled:pointer-events-none data-disabled:opacity-50",
 			className
 		)}
@@ -192,7 +217,7 @@ const SelectSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<SelectPrimitive.Separator
 		ref={ref}
-		className={cn("-mx-1 my-1 h-px bg-neutral-200 dark:bg-neutral-700", className)}
+		className={cn("-mx-1 my-1 h-px bg-border", className)}
 		{...props}
 	/>
 ));

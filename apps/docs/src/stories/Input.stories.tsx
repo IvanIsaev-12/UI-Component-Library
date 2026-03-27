@@ -33,7 +33,10 @@ export const Tip: Story = {
 };
 export const Disabled: Story = {
 	args: {
+		label:"Disabled",
 		disabled: true,
+		id: "disabled",
+		tip: "You don't have the access!"
 	},
 };
 export const Error: Story = {

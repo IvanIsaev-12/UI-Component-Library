@@ -10,37 +10,44 @@ interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>
 
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-    ({ label, id, className, ...props }, ref) => (
-        <div className="flex items-center gap-2">
-            <input
-                type="checkbox"
-                id={id}
-                className={cn(
-                    "h-4 w-4 rounded border-neutral-300 dark:border-neutral-600",
-                    "text-primary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
-                    "cursor-pointer transition-colors",
-                    "disabled:cursor-not-allowed disabled:opacity-50",
-                    "dark:bg-neutral-800 dark:checked:bg-primary-500",
-                    className
-                )}
-                ref={ref}
-                {...props}
-            />
-            {label && (
-                <label
-                    htmlFor={id}
+    ({ label, id, className, ...props }, ref) => {
+        const generatedId = React.useId();
+        const checkboxId = id || generatedId;
+
+        return (
+            <div className="flex items-center gap-2">
+                <input
+                    type="checkbox"
+                    id={checkboxId}
                     className={cn(
-                        "text-sm font-medium text-neutral-900 dark:text-neutral-50",
-                        "cursor-pointer select-none",
-                        "hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors",
-                        "disabled:cursor-not-allowed disabled:opacity-50"
+                        "h-4 w-4 rounded border-neutral-300 dark:border-neutral-600",
+                        "text-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
+                        "cursor-pointer transition-all duration-200 ease-in-out",
+                        "checked:animate-checkbox-pop",
+                        "disabled:cursor-not-allowed disabled:opacity-50",
+                        "dark:bg-neutral-800 dark:checked:bg-primary-500",
+                        className
                     )}
-                >
-                    {label}
-                </label>
-            )}
-        </div>
-    )
+                    ref={ref}
+                    aria-label={!label ? props["aria-label"] : undefined}
+                    {...props}
+                />
+                {label && (
+                    <label
+                        htmlFor={checkboxId}
+                        className={cn(
+                            "text-sm font-medium text-foreground",
+                            "cursor-pointer select-none",
+                            "hover:text-foreground-muted transition-colors",
+                            "disabled:cursor-not-allowed disabled:opacity-50"
+                        )}
+                    >
+                        {label}
+                    </label>
+                )}
+            </div>
+        );
+    }
 );
 
 Checkbox.displayName = "Checkbox";

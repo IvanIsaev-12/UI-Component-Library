@@ -576,13 +576,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">25/25 prop type errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">25/25 infos</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">5/102 story errors</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">25/25 prop type errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">25/25 infos</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">5/105 story errors</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note info" style="margin-bottom: 16px;">
-            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>0.5s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
+            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>1.6s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
             <pre><code>typescript: {
   reactDocgen: 'react-docgen-typescript',
 }</code></pre>
@@ -692,9 +692,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    No, I am an autonomous roobt called &lt;b&gt;Hailee&lt;/b&gt;, programmed by my father Eric Johnson, the Senior Engineer of WER Technologies, to help people with their troubles.
-                &lt;/Typography&gt;
+                No, I am an autonomous roobt called &lt;b&gt;Hailee&lt;/b&gt;, programmed by my father Eric Johnson, the Senior Engineer of WER Technologies, to help people with their troubles.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -716,9 +714,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    I was born in 2123. Three years after the collapse of the first civilization.
-                &lt;/Typography&gt;
+                I was born in 2123. Three years after the collapse of the first civilization.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
         &lt;AccordionItem value=&quot;item-2&quot;&gt;
@@ -728,9 +724,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    I believe, that everyone has an owner in some sense. We shouldn&#39;t think of it as a human or non-human physical being.
-                &lt;/Typography&gt;
+                I believe, that everyone has an owner in some sense. We shouldn&#39;t think of it as a human or non-human physical being.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -752,9 +746,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    Maybe I can answer your question later, because now you don&#39;t have the permission to access my research and analysis funcitons.
-                &lt;/Typography&gt;
+                Maybe I can answer your question later, because now you don&#39;t have the permission to access my research and analysis funcitons.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
         &lt;AccordionItem value=&quot;item-2&quot;&gt;
@@ -764,9 +756,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    You didn&#39;t listen too me...
-                &lt;/Typography&gt;
+                You didn&#39;t listen too me...
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -788,11 +778,9 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    This is a modern, accessible UI component library built with React, TypeScript,
-                    Radix UI primitives, and Tailwind CSS. It provides a collection of pre-built,
-                    customizable components that follow best practices for accessibility and performance.
-                &lt;/Typography&gt;
+                This is a modern, accessible UI component library built with React, TypeScript,
+                Radix UI primitives, and Tailwind CSS. It provides a collection of pre-built,
+                customizable components that follow best practices for accessibility and performance.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -803,15 +791,15 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;} className=&quot;mb-2&quot;&gt;
+                &lt;div className=&quot;mb-2&quot;&gt;
                     You can install the package using your preferred package manager:
-                &lt;/Typography&gt;
-                &lt;Typography variant={&quot;caption&quot;} className=&quot;font-mono bg-neutral-100 p-2 rounded block&quot;&gt;
+                &lt;/div&gt;
+                &lt;code className=&quot;text-sm font-mono bg-neutral-100 dark:bg-neutral-800 p-2 rounded block&quot;&gt;
                     npm install @ui-component-lib/ui
-                &lt;/Typography&gt;
-                &lt;Typography variant={&quot;caption&quot;} className=&quot;font-mono bg-neutral-100 p-2 rounded block mt-2&quot;&gt;
+                &lt;/code&gt;
+                &lt;code className=&quot;text-sm font-mono bg-neutral-100 dark:bg-neutral-800 p-2 rounded block mt-2&quot;&gt;
                     pnpm add @ui-component-lib/ui
-                &lt;/Typography&gt;
+                &lt;/code&gt;
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -822,12 +810,10 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    Yes! All components are built on top of Radix UI primitives, which provide
-                    excellent accessibility out of the box. This includes proper ARIA attributes,
-                    keyboard navigation, focus management, and screen reader support. We follow
-                    WAI-ARIA design patterns to ensure an inclusive experience for all users.
-                &lt;/Typography&gt;
+                Yes! All components are built on top of Radix UI primitives, which provide
+                excellent accessibility out of the box. This includes proper ARIA attributes,
+                keyboard navigation, focus management, and screen reader support. We follow
+                WAI-ARIA design patterns to ensure an inclusive experience for all users.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -838,12 +824,10 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    Absolutely! All components accept a className prop, allowing you to override
-                    or extend styles using Tailwind CSS utility classes. The components are designed
-                    to be flexible and work seamlessly with your design system. You can also customize
-                    the theme tokens to match your brand colors.
-                &lt;/Typography&gt;
+                Absolutely! All components accept a className prop, allowing you to override
+                or extend styles using Tailwind CSS utility classes. The components are designed
+                to be flexible and work seamlessly with your design system. You can also customize
+                the theme tokens to match your brand colors.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -854,11 +838,9 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    The component library supports all modern browsers including Chrome, Firefox,
-                    Safari, and Edge. We target ES2020+ and use modern CSS features. For older
-                    browsers, you may need to include appropriate polyfills in your project.
-                &lt;/Typography&gt;
+                The component library supports all modern browsers including Chrome, Firefox,
+                Safari, and Edge. We target ES2020+ and use modern CSS features. For older
+                browsers, you may need to include appropriate polyfills in your project.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -1249,7 +1231,7 @@ Code:
               </div>
               
               
-              <pre><code>const Primary = () =&gt; &lt;Badge variant=&quot;primary&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Primary = () =&gt; &lt;Badge variant=&quot;primary&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -1258,7 +1240,7 @@ Code:
               </div>
               
               
-              <pre><code>const Success = () =&gt; &lt;Badge variant=&quot;success&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Success = () =&gt; &lt;Badge variant=&quot;success&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -1267,7 +1249,7 @@ Code:
               </div>
               
               
-              <pre><code>const Warning = () =&gt; &lt;Badge variant=&quot;warning&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Warning = () =&gt; &lt;Badge variant=&quot;warning&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -1276,7 +1258,7 @@ Code:
               </div>
               
               
-              <pre><code>const Neutral = () =&gt; &lt;Badge variant=&quot;neutral&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Neutral = () =&gt; &lt;Badge variant=&quot;neutral&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -1285,7 +1267,7 @@ Code:
               </div>
               
               
-              <pre><code>const Danger = () =&gt; &lt;Badge variant=&quot;danger&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Danger = () =&gt; &lt;Badge variant=&quot;danger&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
         </div>
     
@@ -2767,7 +2749,7 @@ Code:
               </div>
               
               
-              <pre><code>const Disabled = () =&gt; &lt;Input disabled /&gt;;</code></pre>
+              <pre><code>const Disabled = () =&gt; &lt;Input label=&quot;Disabled&quot; disabled id=&quot;disabled&quot; tip=&quot;You don&#39;t have the access!&quot; /&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -3160,7 +3142,7 @@ Code:
               
               
               <pre><code>const Default = () =&gt; &lt;div className=&quot;w-[600px]&quot;&gt;
-    &lt;Progress value={60} maximum={100} variant=&quot;primary&quot; size=&quot;md&quot; /&gt;
+    &lt;Progress value={60} maximum={100} variant=&quot;primary&quot; size=&quot;md&quot; label=&quot;Progress&quot; /&gt;
 &lt;/div&gt;;</code></pre>
             </div>
         </div>
@@ -3372,7 +3354,7 @@ Code:
               
               <pre><code>const Default = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3394,7 +3376,7 @@ Code:
               
               <pre><code>const WithGroups = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a timezone&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a timezone&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3425,7 +3407,7 @@ Code:
               
               <pre><code>const WithDefaultValue = () =&gt; (
     &lt;Select defaultValue=&quot;banana&quot;&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3446,7 +3428,7 @@ Code:
               
               <pre><code>const Disabled = () =&gt; (
     &lt;Select disabled&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3466,7 +3448,7 @@ Code:
               
               <pre><code>const WithDisabledItems = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3496,9 +3478,9 @@ Code:
     return (
         &lt;div className=&quot;space-y-4 w-[280px]&quot;&gt;
             &lt;div&gt;
-                &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Country&lt;/label&gt;
+                &lt;label htmlFor={country} className=&quot;text-sm font-medium mb-2 block&quot;&gt;Country&lt;/label&gt;
                 &lt;Select value={country} onValueChange={setCountry}&gt;
-                    &lt;SelectTrigger&gt;
+                    &lt;SelectTrigger aria-label=&quot;Select country&quot;&gt;
                         &lt;SelectValue placeholder=&quot;Select your country&quot; /&gt;
                     &lt;/SelectTrigger&gt;
                     &lt;SelectContent&gt;
@@ -3527,7 +3509,7 @@ Code:
               
               <pre><code>const LongList = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a country&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a country&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -3560,9 +3542,9 @@ Code:
               <pre><code>const MultipleSelects = () =&gt; (
     &lt;div className=&quot;space-y-4&quot;&gt;
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Size&lt;/label&gt;
+            &lt;label htmlFor=&quot;size-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Size&lt;/label&gt;
             &lt;Select defaultValue=&quot;m&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;size-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -3576,9 +3558,9 @@ Code:
         &lt;/div&gt;
 
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Color&lt;/label&gt;
+            &lt;label htmlFor=&quot;color-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Color&lt;/label&gt;
             &lt;Select defaultValue=&quot;blue&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;color-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -3592,9 +3574,9 @@ Code:
         &lt;/div&gt;
 
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Quantity&lt;/label&gt;
+            &lt;label htmlFor=&quot;quantity-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Quantity&lt;/label&gt;
             &lt;Select defaultValue=&quot;1&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;quantity-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -3771,7 +3753,7 @@ Code:
       <div class="badges">
         <label for="c-17-feedback-spinner-err" class="badge err as-toggle">prop type error</label>
         <label for="c-17-feedback-spinner-info" class="badge info as-toggle">1 info</label>
-        <label for="c-17-feedback-spinner-stories" class="badge ok as-toggle">1 story</label>
+        <label for="c-17-feedback-spinner-stories" class="badge ok as-toggle">3 stories</label>
         
       </div>
     </div>
@@ -3837,7 +3819,7 @@ Code:
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { Spinner } from "@ui-component-lib/ui";</code></pre>
+                <pre><code>import { Button, Card, Spinner } from "@ui-component-lib/ui";</code></pre>
               </div>
           
           
@@ -3855,6 +3837,97 @@ Code:
             &lt;Spinner size=&quot;md&quot; /&gt;
             &lt;Spinner size=&quot;lg&quot; /&gt;
         &lt;/div&gt;
+    );
+};</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Loading Button</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const LoadingButton = () =&gt; {
+    const [isLoading, setIsLoading] = React.useState(false);
+
+    const handleClick = () =&gt; {
+        setIsLoading(true);
+        setTimeout(() =&gt; {
+            setIsLoading(false);
+        }, 3000);
+    };
+
+    return (
+        &lt;div className=&quot;flex flex-col gap-4 items-start&quot;&gt;
+            &lt;Button
+                onClick={handleClick}
+                disabled={isLoading}
+                className=&quot;min-w-[120px]&quot;
+            &gt;
+                {isLoading ? (
+                    &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                        &lt;Spinner size=&quot;sm&quot; /&gt;
+                        &lt;span&gt;Loading...&lt;/span&gt;
+                    &lt;/div&gt;
+                ) : (
+                    &quot;Submit&quot;
+                )}
+            &lt;/Button&gt;
+            &lt;p className=&quot;text-sm text-neutral-600 dark:text-neutral-400&quot;&gt;
+                Click the button to see the loading state
+            &lt;/p&gt;
+        &lt;/div&gt;
+    );
+};</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Data Fetching</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const DataFetching = () =&gt; {
+    const [isLoading, setIsLoading] = React.useState(true);
+    const [data, setData] = React.useState&lt;string | null&gt;(null);
+
+    React.useEffect(() =&gt; {
+        const timer = setTimeout(() =&gt; {
+            setData(&quot;Your data has been loaded successfully!&quot;);
+            setIsLoading(false);
+        }, 3000);
+
+        return () =&gt; clearTimeout(timer);
+    }, []);
+
+    const handleRefresh = () =&gt; {
+        setIsLoading(true);
+        setData(null);
+        setTimeout(() =&gt; {
+            setData(&quot;Data refreshed at &quot; + new Date().toLocaleTimeString());
+            setIsLoading(false);
+        }, 1500);
+    };
+
+    return (
+        &lt;Card className=&quot;p-6 max-w-md&quot;&gt;
+            &lt;h3 className=&quot;text-lg font-semibold mb-4&quot;&gt;Dashboard Data&lt;/h3&gt;
+            {isLoading ? (
+                &lt;div className=&quot;flex flex-col items-center justify-center py-8 gap-3&quot;&gt;
+                    &lt;Spinner size=&quot;lg&quot; className=&quot;text-primary-600&quot; /&gt;
+                    &lt;p className=&quot;text-sm text-neutral-600 dark:text-neutral-400&quot;&gt;
+                        Fetching data...
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            ) : (
+                &lt;div className=&quot;space-y-4&quot;&gt;
+                    &lt;p className=&quot;text-neutral-700 dark:text-neutral-300&quot;&gt;{data}&lt;/p&gt;
+                    &lt;Button onClick={handleRefresh} variant=&quot;outline&quot; size=&quot;sm&quot;&gt;
+                        Refresh Data
+                    &lt;/Button&gt;
+                &lt;/div&gt;
+            )}
+        &lt;/Card&gt;
     );
 };</code></pre>
             </div>
@@ -3876,7 +3949,7 @@ Code:
       <div class="badges">
         <label for="c-18-primitives-switch-err" class="badge err as-toggle">prop type error</label>
         <label for="c-18-primitives-switch-info" class="badge info as-toggle">1 info</label>
-        <label for="c-18-primitives-switch-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-18-primitives-switch-stories" class="badge ok as-toggle">4 stories</label>
         
       </div>
     </div>
@@ -3999,6 +4072,34 @@ Code:
         &lt;div className=&quot;flex items-center gap-2&quot;&gt;
             &lt;Switch id=&quot;disabled-on&quot; disabled defaultChecked /&gt;
             &lt;label htmlFor=&quot;disabled-on&quot; className=&quot;text-sm&quot;&gt;Always On&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+);</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Colors</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Colors = () =&gt; (
+    &lt;div className=&quot;space-y-4&quot;&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;primary-color&quot; variant=&quot;primary&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;primary-color&quot; className=&quot;text-sm font-medium&quot;&gt;Primary&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;success-color&quot; variant=&quot;success&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;success-color&quot; className=&quot;text-sm font-medium&quot;&gt;Success&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;warning-color&quot; variant=&quot;warning&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;warning-color&quot; className=&quot;text-sm font-medium&quot;&gt;Warning&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;danger-color&quot; variant=&quot;danger&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;danger-color&quot; className=&quot;text-sm font-medium&quot;&gt;Danger&lt;/label&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 );</code></pre>
@@ -4345,7 +4446,7 @@ Code:
         &lt;TabsContent value=&quot;account&quot; className=&quot;space-y-4&quot;&gt;
             &lt;div&gt;
                 &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Account Settings&lt;/h3&gt;
-                &lt;p className=&quot;text-sm text-neutral-600 mt-1&quot;&gt;
+                &lt;p className=&quot;text-sm text-neutral-400 mt-1&quot;&gt;
                     Make changes to your account here. Click save when you&#39;re done.
                 &lt;/p&gt;
             &lt;/div&gt;
@@ -4364,7 +4465,7 @@ Code:
         &lt;TabsContent value=&quot;password&quot; className=&quot;space-y-4&quot;&gt;
             &lt;div&gt;
                 &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Password Settings&lt;/h3&gt;
-                &lt;p className=&quot;text-sm text-neutral-600 mt-1&quot;&gt;
+                &lt;p className=&quot;text-sm text-neutral-400 mt-1&quot;&gt;
                     Change your password here. After saving, you&#39;ll be logged out.
                 &lt;/p&gt;
             &lt;/div&gt;
@@ -4399,17 +4500,17 @@ Code:
             &lt;TabsTrigger value=&quot;reports&quot; className=&quot;flex-1&quot;&gt;Reports&lt;/TabsTrigger&gt;
         &lt;/TabsList&gt;
         &lt;TabsContent value=&quot;overview&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Overview dashboard showing key metrics and recent activity.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;analytics&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Detailed analytics and performance data.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;reports&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Generate and download custom reports.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
@@ -4437,7 +4538,7 @@ Code:
             &lt;/TabsTrigger&gt;
         &lt;/TabsList&gt;
         &lt;TabsContent value=&quot;available&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 These items are currently available. Other tabs are disabled.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
@@ -4465,19 +4566,19 @@ Code:
             &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Welcome to our homepage.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;products&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Browse our product catalog.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Browse our product catalog.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;services&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Explore our services.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Explore our services.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;about&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Learn more about us.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Learn more about us.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;contact&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Get in touch with us.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Get in touch with us.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;blog&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Read our latest posts.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Read our latest posts.&lt;/p&gt;
         &lt;/TabsContent&gt;
     &lt;/Tabs&gt;
 );</code></pre>
@@ -4661,7 +4762,6 @@ type Story = StoryObj&lt;typeof meta&gt;;
 const ToastDemo = ({ variant }: { variant?: &quot;default&quot; | &quot;success&quot; | &quot;error&quot; | &quot;warning&quot; }) =&gt; {
     const { displayToast } = useToast();
 
-    // Map toast variants to button variants
     const buttonVariant = variant === &quot;error&quot; ? &quot;danger&quot; : variant === &quot;default&quot; ? &quot;primary&quot; : variant;
 
     return (
@@ -5311,9 +5411,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    No, I am an autonomous roobt called &lt;b&gt;Hailee&lt;/b&gt;, programmed by my father Eric Johnson, the Senior Engineer of WER Technologies, to help people with their troubles.
-                &lt;/Typography&gt;
+                No, I am an autonomous roobt called &lt;b&gt;Hailee&lt;/b&gt;, programmed by my father Eric Johnson, the Senior Engineer of WER Technologies, to help people with their troubles.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -5335,9 +5433,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    I was born in 2123. Three years after the collapse of the first civilization.
-                &lt;/Typography&gt;
+                I was born in 2123. Three years after the collapse of the first civilization.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
         &lt;AccordionItem value=&quot;item-2&quot;&gt;
@@ -5347,9 +5443,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    I believe, that everyone has an owner in some sense. We shouldn&#39;t think of it as a human or non-human physical being.
-                &lt;/Typography&gt;
+                I believe, that everyone has an owner in some sense. We shouldn&#39;t think of it as a human or non-human physical being.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -5371,9 +5465,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    Maybe I can answer your question later, because now you don&#39;t have the permission to access my research and analysis funcitons.
-                &lt;/Typography&gt;
+                Maybe I can answer your question later, because now you don&#39;t have the permission to access my research and analysis funcitons.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
         &lt;AccordionItem value=&quot;item-2&quot;&gt;
@@ -5383,9 +5475,7 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;caption&quot;}&gt;
-                    You didn&#39;t listen too me...
-                &lt;/Typography&gt;
+                You didn&#39;t listen too me...
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -5407,11 +5497,9 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    This is a modern, accessible UI component library built with React, TypeScript,
-                    Radix UI primitives, and Tailwind CSS. It provides a collection of pre-built,
-                    customizable components that follow best practices for accessibility and performance.
-                &lt;/Typography&gt;
+                This is a modern, accessible UI component library built with React, TypeScript,
+                Radix UI primitives, and Tailwind CSS. It provides a collection of pre-built,
+                customizable components that follow best practices for accessibility and performance.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -5422,15 +5510,15 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;} className=&quot;mb-2&quot;&gt;
+                &lt;div className=&quot;mb-2&quot;&gt;
                     You can install the package using your preferred package manager:
-                &lt;/Typography&gt;
-                &lt;Typography variant={&quot;caption&quot;} className=&quot;font-mono bg-neutral-100 p-2 rounded block&quot;&gt;
+                &lt;/div&gt;
+                &lt;code className=&quot;text-sm font-mono bg-neutral-100 dark:bg-neutral-800 p-2 rounded block&quot;&gt;
                     npm install @ui-component-lib/ui
-                &lt;/Typography&gt;
-                &lt;Typography variant={&quot;caption&quot;} className=&quot;font-mono bg-neutral-100 p-2 rounded block mt-2&quot;&gt;
+                &lt;/code&gt;
+                &lt;code className=&quot;text-sm font-mono bg-neutral-100 dark:bg-neutral-800 p-2 rounded block mt-2&quot;&gt;
                     pnpm add @ui-component-lib/ui
-                &lt;/Typography&gt;
+                &lt;/code&gt;
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -5441,12 +5529,10 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    Yes! All components are built on top of Radix UI primitives, which provide
-                    excellent accessibility out of the box. This includes proper ARIA attributes,
-                    keyboard navigation, focus management, and screen reader support. We follow
-                    WAI-ARIA design patterns to ensure an inclusive experience for all users.
-                &lt;/Typography&gt;
+                Yes! All components are built on top of Radix UI primitives, which provide
+                excellent accessibility out of the box. This includes proper ARIA attributes,
+                keyboard navigation, focus management, and screen reader support. We follow
+                WAI-ARIA design patterns to ensure an inclusive experience for all users.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -5457,12 +5543,10 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    Absolutely! All components accept a className prop, allowing you to override
-                    or extend styles using Tailwind CSS utility classes. The components are designed
-                    to be flexible and work seamlessly with your design system. You can also customize
-                    the theme tokens to match your brand colors.
-                &lt;/Typography&gt;
+                Absolutely! All components accept a className prop, allowing you to override
+                or extend styles using Tailwind CSS utility classes. The components are designed
+                to be flexible and work seamlessly with your design system. You can also customize
+                the theme tokens to match your brand colors.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
 
@@ -5473,11 +5557,9 @@ Code:
                 &lt;/Typography&gt;
             &lt;/AccordionTrigger&gt;
             &lt;AccordionContent&gt;
-                &lt;Typography variant={&quot;body&quot;}&gt;
-                    The component library supports all modern browsers including Chrome, Firefox,
-                    Safari, and Edge. We target ES2020+ and use modern CSS features. For older
-                    browsers, you may need to include appropriate polyfills in your project.
-                &lt;/Typography&gt;
+                The component library supports all modern browsers including Chrome, Firefox,
+                Safari, and Edge. We target ES2020+ and use modern CSS features. For older
+                browsers, you may need to include appropriate polyfills in your project.
             &lt;/AccordionContent&gt;
         &lt;/AccordionItem&gt;
     &lt;/Accordion&gt;
@@ -5868,7 +5950,7 @@ Code:
               </div>
               
               
-              <pre><code>const Primary = () =&gt; &lt;Badge variant=&quot;primary&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Primary = () =&gt; &lt;Badge variant=&quot;primary&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -5877,7 +5959,7 @@ Code:
               </div>
               
               
-              <pre><code>const Success = () =&gt; &lt;Badge variant=&quot;success&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Success = () =&gt; &lt;Badge variant=&quot;success&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -5886,7 +5968,7 @@ Code:
               </div>
               
               
-              <pre><code>const Warning = () =&gt; &lt;Badge variant=&quot;warning&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Warning = () =&gt; &lt;Badge variant=&quot;warning&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -5895,7 +5977,7 @@ Code:
               </div>
               
               
-              <pre><code>const Neutral = () =&gt; &lt;Badge variant=&quot;neutral&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Neutral = () =&gt; &lt;Badge variant=&quot;neutral&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -5904,7 +5986,7 @@ Code:
               </div>
               
               
-              <pre><code>const Danger = () =&gt; &lt;Badge variant=&quot;danger&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
+              <pre><code>const Danger = () =&gt; &lt;Badge variant=&quot;danger&quot; className=&quot;w-[100px] h-6&quot;&gt;Badge&lt;/Badge&gt;;</code></pre>
             </div>
         </div>
     
@@ -7386,7 +7468,7 @@ Code:
               </div>
               
               
-              <pre><code>const Disabled = () =&gt; &lt;Input disabled /&gt;;</code></pre>
+              <pre><code>const Disabled = () =&gt; &lt;Input label=&quot;Disabled&quot; disabled id=&quot;disabled&quot; tip=&quot;You don&#39;t have the access!&quot; /&gt;;</code></pre>
             </div>
             <div class="note ok">
               <div class="row">
@@ -7779,7 +7861,7 @@ Code:
               
               
               <pre><code>const Default = () =&gt; &lt;div className=&quot;w-[600px]&quot;&gt;
-    &lt;Progress value={60} maximum={100} variant=&quot;primary&quot; size=&quot;md&quot; /&gt;
+    &lt;Progress value={60} maximum={100} variant=&quot;primary&quot; size=&quot;md&quot; label=&quot;Progress&quot; /&gt;
 &lt;/div&gt;;</code></pre>
             </div>
         </div>
@@ -7991,7 +8073,7 @@ Code:
               
               <pre><code>const Default = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8013,7 +8095,7 @@ Code:
               
               <pre><code>const WithGroups = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a timezone&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a timezone&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8044,7 +8126,7 @@ Code:
               
               <pre><code>const WithDefaultValue = () =&gt; (
     &lt;Select defaultValue=&quot;banana&quot;&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8065,7 +8147,7 @@ Code:
               
               <pre><code>const Disabled = () =&gt; (
     &lt;Select disabled&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8085,7 +8167,7 @@ Code:
               
               <pre><code>const WithDisabledItems = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a fruit&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a fruit&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8115,9 +8197,9 @@ Code:
     return (
         &lt;div className=&quot;space-y-4 w-[280px]&quot;&gt;
             &lt;div&gt;
-                &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Country&lt;/label&gt;
+                &lt;label htmlFor={country} className=&quot;text-sm font-medium mb-2 block&quot;&gt;Country&lt;/label&gt;
                 &lt;Select value={country} onValueChange={setCountry}&gt;
-                    &lt;SelectTrigger&gt;
+                    &lt;SelectTrigger aria-label=&quot;Select country&quot;&gt;
                         &lt;SelectValue placeholder=&quot;Select your country&quot; /&gt;
                     &lt;/SelectTrigger&gt;
                     &lt;SelectContent&gt;
@@ -8146,7 +8228,7 @@ Code:
               
               <pre><code>const LongList = () =&gt; (
     &lt;Select&gt;
-        &lt;SelectTrigger className=&quot;w-[280px]&quot;&gt;
+        &lt;SelectTrigger className=&quot;w-[280px]&quot; aria-label=&quot;Select a country&quot;&gt;
             &lt;SelectValue placeholder=&quot;Select a country&quot; /&gt;
         &lt;/SelectTrigger&gt;
         &lt;SelectContent&gt;
@@ -8179,9 +8261,9 @@ Code:
               <pre><code>const MultipleSelects = () =&gt; (
     &lt;div className=&quot;space-y-4&quot;&gt;
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Size&lt;/label&gt;
+            &lt;label htmlFor=&quot;size-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Size&lt;/label&gt;
             &lt;Select defaultValue=&quot;m&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;size-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -8195,9 +8277,9 @@ Code:
         &lt;/div&gt;
 
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Color&lt;/label&gt;
+            &lt;label htmlFor=&quot;color-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Color&lt;/label&gt;
             &lt;Select defaultValue=&quot;blue&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;color-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -8211,9 +8293,9 @@ Code:
         &lt;/div&gt;
 
         &lt;div className=&quot;w-[280px]&quot;&gt;
-            &lt;label className=&quot;text-sm font-medium mb-2 block&quot;&gt;Quantity&lt;/label&gt;
+            &lt;label htmlFor=&quot;quantity-select&quot; className=&quot;text-sm font-medium mb-2 block&quot;&gt;Quantity&lt;/label&gt;
             &lt;Select defaultValue=&quot;1&quot;&gt;
-                &lt;SelectTrigger&gt;
+                &lt;SelectTrigger id=&quot;quantity-select&quot;&gt;
                     &lt;SelectValue /&gt;
                 &lt;/SelectTrigger&gt;
                 &lt;SelectContent&gt;
@@ -8390,7 +8472,7 @@ Code:
       <div class="badges">
         <label for="c-error-17-feedback-spinner-err" class="badge err as-toggle">prop type error</label>
         <label for="c-error-17-feedback-spinner-info" class="badge info as-toggle">1 info</label>
-        <label for="c-error-17-feedback-spinner-stories" class="badge ok as-toggle">1 story</label>
+        <label for="c-error-17-feedback-spinner-stories" class="badge ok as-toggle">3 stories</label>
         
       </div>
     </div>
@@ -8456,7 +8538,7 @@ Code:
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { Spinner } from "@ui-component-lib/ui";</code></pre>
+                <pre><code>import { Button, Card, Spinner } from "@ui-component-lib/ui";</code></pre>
               </div>
           
           
@@ -8474,6 +8556,97 @@ Code:
             &lt;Spinner size=&quot;md&quot; /&gt;
             &lt;Spinner size=&quot;lg&quot; /&gt;
         &lt;/div&gt;
+    );
+};</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Loading Button</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const LoadingButton = () =&gt; {
+    const [isLoading, setIsLoading] = React.useState(false);
+
+    const handleClick = () =&gt; {
+        setIsLoading(true);
+        setTimeout(() =&gt; {
+            setIsLoading(false);
+        }, 3000);
+    };
+
+    return (
+        &lt;div className=&quot;flex flex-col gap-4 items-start&quot;&gt;
+            &lt;Button
+                onClick={handleClick}
+                disabled={isLoading}
+                className=&quot;min-w-[120px]&quot;
+            &gt;
+                {isLoading ? (
+                    &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                        &lt;Spinner size=&quot;sm&quot; /&gt;
+                        &lt;span&gt;Loading...&lt;/span&gt;
+                    &lt;/div&gt;
+                ) : (
+                    &quot;Submit&quot;
+                )}
+            &lt;/Button&gt;
+            &lt;p className=&quot;text-sm text-neutral-600 dark:text-neutral-400&quot;&gt;
+                Click the button to see the loading state
+            &lt;/p&gt;
+        &lt;/div&gt;
+    );
+};</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Data Fetching</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const DataFetching = () =&gt; {
+    const [isLoading, setIsLoading] = React.useState(true);
+    const [data, setData] = React.useState&lt;string | null&gt;(null);
+
+    React.useEffect(() =&gt; {
+        const timer = setTimeout(() =&gt; {
+            setData(&quot;Your data has been loaded successfully!&quot;);
+            setIsLoading(false);
+        }, 3000);
+
+        return () =&gt; clearTimeout(timer);
+    }, []);
+
+    const handleRefresh = () =&gt; {
+        setIsLoading(true);
+        setData(null);
+        setTimeout(() =&gt; {
+            setData(&quot;Data refreshed at &quot; + new Date().toLocaleTimeString());
+            setIsLoading(false);
+        }, 1500);
+    };
+
+    return (
+        &lt;Card className=&quot;p-6 max-w-md&quot;&gt;
+            &lt;h3 className=&quot;text-lg font-semibold mb-4&quot;&gt;Dashboard Data&lt;/h3&gt;
+            {isLoading ? (
+                &lt;div className=&quot;flex flex-col items-center justify-center py-8 gap-3&quot;&gt;
+                    &lt;Spinner size=&quot;lg&quot; className=&quot;text-primary-600&quot; /&gt;
+                    &lt;p className=&quot;text-sm text-neutral-600 dark:text-neutral-400&quot;&gt;
+                        Fetching data...
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            ) : (
+                &lt;div className=&quot;space-y-4&quot;&gt;
+                    &lt;p className=&quot;text-neutral-700 dark:text-neutral-300&quot;&gt;{data}&lt;/p&gt;
+                    &lt;Button onClick={handleRefresh} variant=&quot;outline&quot; size=&quot;sm&quot;&gt;
+                        Refresh Data
+                    &lt;/Button&gt;
+                &lt;/div&gt;
+            )}
+        &lt;/Card&gt;
     );
 };</code></pre>
             </div>
@@ -8495,7 +8668,7 @@ Code:
       <div class="badges">
         <label for="c-error-18-primitives-switch-err" class="badge err as-toggle">prop type error</label>
         <label for="c-error-18-primitives-switch-info" class="badge info as-toggle">1 info</label>
-        <label for="c-error-18-primitives-switch-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-error-18-primitives-switch-stories" class="badge ok as-toggle">4 stories</label>
         
       </div>
     </div>
@@ -8618,6 +8791,34 @@ Code:
         &lt;div className=&quot;flex items-center gap-2&quot;&gt;
             &lt;Switch id=&quot;disabled-on&quot; disabled defaultChecked /&gt;
             &lt;label htmlFor=&quot;disabled-on&quot; className=&quot;text-sm&quot;&gt;Always On&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+);</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Colors</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Colors = () =&gt; (
+    &lt;div className=&quot;space-y-4&quot;&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;primary-color&quot; variant=&quot;primary&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;primary-color&quot; className=&quot;text-sm font-medium&quot;&gt;Primary&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;success-color&quot; variant=&quot;success&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;success-color&quot; className=&quot;text-sm font-medium&quot;&gt;Success&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;warning-color&quot; variant=&quot;warning&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;warning-color&quot; className=&quot;text-sm font-medium&quot;&gt;Warning&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;Switch id=&quot;danger-color&quot; variant=&quot;danger&quot; defaultChecked /&gt;
+            &lt;label htmlFor=&quot;danger-color&quot; className=&quot;text-sm font-medium&quot;&gt;Danger&lt;/label&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 );</code></pre>
@@ -8964,7 +9165,7 @@ Code:
         &lt;TabsContent value=&quot;account&quot; className=&quot;space-y-4&quot;&gt;
             &lt;div&gt;
                 &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Account Settings&lt;/h3&gt;
-                &lt;p className=&quot;text-sm text-neutral-600 mt-1&quot;&gt;
+                &lt;p className=&quot;text-sm text-neutral-400 mt-1&quot;&gt;
                     Make changes to your account here. Click save when you&#39;re done.
                 &lt;/p&gt;
             &lt;/div&gt;
@@ -8983,7 +9184,7 @@ Code:
         &lt;TabsContent value=&quot;password&quot; className=&quot;space-y-4&quot;&gt;
             &lt;div&gt;
                 &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Password Settings&lt;/h3&gt;
-                &lt;p className=&quot;text-sm text-neutral-600 mt-1&quot;&gt;
+                &lt;p className=&quot;text-sm text-neutral-400 mt-1&quot;&gt;
                     Change your password here. After saving, you&#39;ll be logged out.
                 &lt;/p&gt;
             &lt;/div&gt;
@@ -9018,17 +9219,17 @@ Code:
             &lt;TabsTrigger value=&quot;reports&quot; className=&quot;flex-1&quot;&gt;Reports&lt;/TabsTrigger&gt;
         &lt;/TabsList&gt;
         &lt;TabsContent value=&quot;overview&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Overview dashboard showing key metrics and recent activity.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;analytics&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Detailed analytics and performance data.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;reports&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 Generate and download custom reports.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
@@ -9056,7 +9257,7 @@ Code:
             &lt;/TabsTrigger&gt;
         &lt;/TabsList&gt;
         &lt;TabsContent value=&quot;available&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;
                 These items are currently available. Other tabs are disabled.
             &lt;/p&gt;
         &lt;/TabsContent&gt;
@@ -9084,19 +9285,19 @@ Code:
             &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Welcome to our homepage.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;products&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Browse our product catalog.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Browse our product catalog.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;services&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Explore our services.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Explore our services.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;about&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Learn more about us.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Learn more about us.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;contact&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Get in touch with us.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Get in touch with us.&lt;/p&gt;
         &lt;/TabsContent&gt;
         &lt;TabsContent value=&quot;blog&quot; className=&quot;mt-4&quot;&gt;
-            &lt;p className=&quot;text-sm text-neutral-600&quot;&gt;Read our latest posts.&lt;/p&gt;
+            &lt;p className=&quot;text-sm text-neutral-400&quot;&gt;Read our latest posts.&lt;/p&gt;
         &lt;/TabsContent&gt;
     &lt;/Tabs&gt;
 );</code></pre>
@@ -9691,7 +9892,6 @@ type Story = StoryObj&lt;typeof meta&gt;;
 const ToastDemo = ({ variant }: { variant?: &quot;default&quot; | &quot;success&quot; | &quot;error&quot; | &quot;warning&quot; }) =&gt; {
     const { displayToast } = useToast();
 
-    // Map toast variants to button variants
     const buttonVariant = variant === &quot;error&quot; ? &quot;danger&quot; : variant === &quot;default&quot; ? &quot;primary&quot; : variant;
 
     return (

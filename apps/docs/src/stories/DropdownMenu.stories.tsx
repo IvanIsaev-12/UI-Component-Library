@@ -93,18 +93,21 @@ export const WithCheckboxes: Story = {
 					<DropdownMenuCheckboxItem
 						checked={showStatusBar}
 						onCheckedChange={setShowStatusBar}
+						onSelect={(e: Event) => e.preventDefault()}
 					>
 						Status Bar
 					</DropdownMenuCheckboxItem>
 					<DropdownMenuCheckboxItem
 						checked={showActivityBar}
 						onCheckedChange={setShowActivityBar}
+						onSelect={(e: Event) => e.preventDefault()}
 					>
 						Activity Bar
 					</DropdownMenuCheckboxItem>
 					<DropdownMenuCheckboxItem
 						checked={showPanel}
 						onCheckedChange={setShowPanel}
+						onSelect={(e: Event) => e.preventDefault()}
 					>
 						Panel
 					</DropdownMenuCheckboxItem>

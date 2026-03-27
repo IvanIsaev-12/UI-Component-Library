@@ -14,7 +14,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem";
 
 const BreadcrumbLink = ({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
 	<a
-		className={cn("transition-colors hover:text-neutral-900 font-medium", className)}
+		className={cn("transition-colors hover:text-foreground font-medium", className)}
 		{...props}
 	/>
 );
@@ -22,7 +22,7 @@ BreadcrumbLink.displayName = "BreadcrumbLink";
 
 const BreadcrumbList = ({ className, ...props }: React.OlHTMLAttributes<HTMLOListElement>) => (
 	<ol
-		className={cn("flex items-center gap-2 text-sm text-neutral-600", className)}
+		className={cn("flex items-center gap-2 text-sm text-foreground-muted", className)}
 		{...props}
 	/>
 );
@@ -33,7 +33,7 @@ const BreadcrumbPage = ({ className, ...props }: React.HTMLAttributes<HTMLSpanEl
 		role="link"
 		aria-disabled="true"
 		aria-current="page"
-		className={cn("font-medium text-neutral-900", className)}
+		className={cn("font-medium text-foreground", className)}
 		{...props}
 	/>
 );
@@ -43,7 +43,7 @@ const BreadcrumbSeparator = ({ children, className, ...props }: React.LiHTMLAttr
 	<li
 		role="presentation"
 		aria-hidden="true"
-		className={cn("text-neutral-400", className)}
+		className={cn("text-foreground-subtle", className)}
 		{...props}
 	>
 		{children ?? <ChevronRight className="w-4 h-4"/>}

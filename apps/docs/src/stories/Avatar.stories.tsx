@@ -59,8 +59,8 @@ export const Shapes: Story = {
 	render: () => {
 		return (
 			<div className="flex items-center gap-4">
-				<Avatar fallback="Ci" shape="circle" />
-				<Avatar fallback="Sq" shape="square" />
+				<Avatar fallback="Ci" shape="circle" alt="Circle shaped avatar" />
+				<Avatar fallback="Sq" shape="square" alt="Square shaped avatar" />
 			</div>
 		);
 	},

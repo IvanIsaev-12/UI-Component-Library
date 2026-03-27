@@ -137,9 +137,9 @@ export const WithCheckbox: Story = {
             </PopoverTrigger>
             <PopoverContent className="w-96">
                 <div className="space-y-3">
-                    <Checkbox label="Candidate 1"/>
-                    <Checkbox label="Candidate 2"/>
-                    <Checkbox label="Candidate 3" />
+                    <Checkbox label="Candidate 1" id="popover-candidate-1" />
+                    <Checkbox label="Candidate 2" id="popover-candidate-2" />
+                    <Checkbox label="Candidate 3" id="popover-candidate-3" />
                 </div>
             </PopoverContent>
         </Popover>

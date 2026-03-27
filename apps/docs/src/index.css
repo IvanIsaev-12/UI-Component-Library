@@ -53,19 +53,41 @@
 	--color-warning-400: #fbbf24;
 	--color-warning-500: #f59e0b;
 	--color-warning-600: #d97706;
+	--color-warning-700: #b45309;
 	--color-warning-800: #92400e;
 	--color-warning-900: #78350f;
+	--color-warning-950: #451a03;
+
+	/* Semantic foreground colors for accessibility */
+	--color-foreground: #18181b;
+	--color-foreground-muted: #52525b;
+	--color-foreground-subtle: #71717a;
+
+	/* Semantic background colors */
+	--color-background: #ffffff;
+	--color-background-muted: #f4f4f5;
+	--color-background-subtle: #fafafa;
+
+	/* Semantic border colors */
+	--color-border: #e4e4e7;
+	--color-border-muted: #d4d4d8;
+
+	/* Semantic placeholder colors */
+	--color-placeholder: #a1a1aa;
 
 	--animate-accordion-down: accordion-down 0.3s ease-out;
 	--animate-accordion-up: accordion-up 0.3s ease-out;
 	--animate-slide-in-right: slide-in-right 0.3s ease-out;
 	--animate-slide-out-right: slide-out-right 0.3s ease-in;
+	--animate-checkbox-pop: checkbox-pop 0.3s ease-in-out;
+	--animate-radio-pop: radio-pop 0.2s ease-in-out;
 
 	@keyframes accordion-down {
 		from {
 			height: 0;
 			opacity: 0;
 		}
+
 		to {
 			height: var(--radix-accordion-content-height);
 			opacity: 1;
@@ -77,6 +99,7 @@
 			height: var(--radix-accordion-content-height);
 			opacity: 1;
 		}
+
 		to {
 			height: 0;
 			opacity: 0;
@@ -88,6 +111,7 @@
 			transform: translateX(100%);
 			opacity: 0;
 		}
+
 		to {
 			transform: translateX(0);
 			opacity: 1;
@@ -99,9 +123,42 @@
 			transform: translateX(0);
 			opacity: 1;
 		}
+
 		to {
 			transform: translateX(100%);
 			opacity: 0;
+		}
+	}
+
+	@keyframes checkbox-pop {
+		0% {
+			transform: scale(0);
+			opacity: 0;
+		}
+
+		70% {
+			transform: scale(1.2);
+			opacity: 1;
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes radio-pop {
+		0% {
+			transform: scale(0.8);
+			opacity: 0;
+		}
+
+		50% {
+			transform: scale(1.15);
+		}
+
+		100% {
+			transform: scale(1);
+			opacity: 1;
 		}
 	}
 }
@@ -124,3 +181,18 @@ html.dark body {
 	@apply bg-neutral-900 text-neutral-50;
 }
 
+/* Override semantic colors in dark mode */
+html.dark {
+	--color-foreground: #fafafa;
+	--color-foreground-muted: #a1a1aa;
+	--color-foreground-subtle: #71717a;
+
+	--color-background: #18181b;
+	--color-background-muted: #27272a;
+	--color-background-subtle: #3f3f46;
+
+	--color-border: #3f3f46;
+	--color-border-muted: #52525b;
+
+	--color-placeholder: #71717a;
+}

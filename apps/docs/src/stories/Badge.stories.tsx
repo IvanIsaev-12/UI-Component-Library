@@ -14,31 +14,35 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
 	args: {
 		variant: "primary",
-		className: "w-5 h-5",
+		className: "w-[100px] h-6",
 		children: "Badge",
 	},
 };
 export const Success: Story = {
 	args: {
 		variant: "success",
+		className: "w-[100px] h-6",
 		children: "Badge",
 	},
 };
 export const Warning: Story = {
 	args: {
 		variant: "warning",
+		className: "w-[100px] h-6",
 		children: "Badge",
 	},
 };
 export const Neutral: Story = {
 	args: {
 		variant: "neutral",
+		className: "w-[100px] h-6",
 		children: "Badge",
 	},
 };
 export const Danger: Story = {
 	args: {
 		variant: "danger",
+		className: "w-[100px] h-6",
 		children: "Badge",
 	},
 };

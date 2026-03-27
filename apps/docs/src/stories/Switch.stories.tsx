@@ -60,3 +60,26 @@ export const Disabled: Story = {
         </div>
     ),
 };
+
+export const Colors: Story = {
+    render: () => (
+        <div className="space-y-4">
+            <div className="flex items-center gap-2">
+                <Switch id="primary-color" variant="primary" defaultChecked />
+                <label htmlFor="primary-color" className="text-sm font-medium">Primary</label>
+            </div>
+            <div className="flex items-center gap-2">
+                <Switch id="success-color" variant="success" defaultChecked />
+                <label htmlFor="success-color" className="text-sm font-medium">Success</label>
+            </div>
+            <div className="flex items-center gap-2">
+                <Switch id="warning-color" variant="warning" defaultChecked />
+                <label htmlFor="warning-color" className="text-sm font-medium">Warning</label>
+            </div>
+            <div className="flex items-center gap-2">
+                <Switch id="danger-color" variant="danger" defaultChecked />
+                <label htmlFor="danger-color" className="text-sm font-medium">Danger</label>
+            </div>
+        </div>
+    ),
+};

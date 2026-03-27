@@ -31,11 +31,29 @@ interface ProgressProps extends React.HTMLAttributes<
     VariantProps<typeof progressVariants> {
     value?: number,
     maximum?: number,
+    label?: string,
 }
 
 const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
-    ({ className, value = 0, variant, maximum = 100, size, ...props }, ref) => {
+    ({ className, value = 0, variant, maximum = 100, size, label, ...props }, ref) => {
         const percentage = Math.min(Math.max((value / maximum) * 100, 0), 100);
+
+        // Development-time accessibility warning
+        React.useEffect(() => {
+            // @ts-ignore - process.env is replaced at build time
+            if (typeof process !== "undefined" && process.env?.NODE_ENV === "development") {
+                const hasAccessibleName = label || props["aria-label"] || props["aria-labelledby"];
+                if (!hasAccessibleName) {
+                    console.warn(
+                        "Progress: Missing accessible label.\n" +
+                        "Please add one of: label prop, aria-label, or aria-labelledby.\n" +
+                        "Example: <Progress value={50} label=\"Upload progress\" />\n\n" +
+                        "This ensures screen readers can announce the progress bar's purpose."
+                    );
+                }
+            }
+        }, [label, props["aria-label"], props["aria-labelledby"]]);
+
         return (
             <div
                 ref={ref}
@@ -44,6 +62,7 @@ const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
                 aria-valuenow={value}
                 aria-valuemin={0}
                 aria-valuemax={maximum}
+                aria-label={label}
                 {...props}
             >
                 <div

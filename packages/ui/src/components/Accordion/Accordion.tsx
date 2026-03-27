@@ -34,7 +34,7 @@ const AccordionTrigger = React.forwardRef<
                 className={cn(
                     "flex flex-1 items-center justify-between py-4 w-full text-left font-medium",
                     "transition-all",
-                    "text-neutral-900 dark:text-neutral-100",
+                    "text-foreground",
                     "[&[data-state=open]>svg]:rotate-180",
                     className
                 )}
@@ -58,7 +58,8 @@ const AccordionContent = React.forwardRef<
             ref={ref}
             className={cn(
                 "overflow-hidden text-sm transition-all",
-                "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+                "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+                "text-foreground-muted"
             )}
             {...props}
         >

@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react-vite";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@ui-component-lib/ui";
-import { Home, Package, ChevronRight, Slash } from "lucide-react";
+import { Slash } from "lucide-react";
 const meta = {
     title: "Components/Breadcrumb",
     component: Breadcrumb,
@@ -42,7 +42,7 @@ export const WithCustomSeparator: Story = {
     render: () => (
         <div className="space-y-4">
 
-            <Breadcrumb>
+            <Breadcrumb id="nav-1">
                 <BreadcrumbList>
                     <BreadcrumbItem>
                         <BreadcrumbLink href="/">
@@ -64,22 +64,6 @@ export const WithCustomSeparator: Story = {
                         <BreadcrumbPage>
                             Help
                         </BreadcrumbPage>
-                    </BreadcrumbItem>
-                </BreadcrumbList>
-            </Breadcrumb>
-
-            <Breadcrumb>
-                <BreadcrumbList>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator>•</BreadcrumbSeparator>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/products">Products</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator>•</BreadcrumbSeparator>
-                    <BreadcrumbItem>
-                        <BreadcrumbPage>Details</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>

@@ -20,11 +20,15 @@ type Story = StoryObj<typeof meta>;
 const ToastDemo = ({ variant }: { variant?: "default" | "success" | "error" | "warning" }) => {
     const { displayToast } = useToast();
 
-    const buttonVariant = variant === "error" ? "danger" : variant === "default" ? "primary" : variant;
+    const buttonVariant: "primary" | "success" | "danger" | "warning" =
+        variant === "error" ? "danger" :
+        variant === "default" ? "primary" :
+        variant === "success" ? "success" :
+        "warning";
 
     return (
         <Button
-            variant={buttonVariant as any}
+            variant={buttonVariant}
             onClick={() => displayToast(`This is a ${variant || "default"} toast!`, variant)}
         >
             Show {variant || "default"} Toast

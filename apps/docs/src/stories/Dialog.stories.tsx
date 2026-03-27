@@ -77,9 +77,9 @@ export const WithForm: Story = {
 					<DialogDescription>Fill in your details below</DialogDescription>
 				</DialogHeader>
 				<div className="flex flex-col gap-4">
-					<Input label="Username" />
-					<Input label="Email" />
-					<Input label="Password" />
+					<Input label="Username" id="username" />
+					<Input label="Email" id="email" type="email" />
+					<Input label="Password" id="password" type="password" />
 				</div>
 				<DialogFooter>
 					<DialogClose asChild>

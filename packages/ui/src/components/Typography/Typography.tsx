@@ -5,13 +5,13 @@ import { cn } from "../../lib/cn";
 const typographyVariants = cva("", {
     variants: {
         variant: {
-            h1: "text-4xl font-bold text-neutral-900 dark:text-neutral-50",
-            h2: "text-3xl font-bold text-neutral-900 dark:text-neutral-50",
-            h3: "text-2xl font-semibold text-neutral-900 dark:text-neutral-50",
-            h4: "text-xl font-semibold text-neutral-900 dark:text-neutral-50",
-            caption: "text-sm text-neutral-500",
-            label: "text-sm font-medium text-neutral-700",
-            body: "text-base text-neutral-700",
+            h1: "text-4xl font-bold text-foreground",
+            h2: "text-3xl font-bold text-foreground",
+            h3: "text-2xl font-semibold text-foreground",
+            h4: "text-xl font-semibold text-foreground",
+            caption: "text-sm text-foreground-muted",
+            label: "text-sm font-medium text-foreground-muted",
+            body: "text-base text-foreground-muted",
         },
     },
     defaultVariants: {

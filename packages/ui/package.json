@@ -2,7 +2,38 @@
 	"name": "@ui-component-lib/ui",
 	"version": "1.0.0",
 	"type": "module",
-	"description": "",
+	"description": "A modern, accessible UI component library for Next.js with 25 production-ready components built with React, TypeScript, Radix UI, and Tailwind CSS",
+	"keywords": [
+		"react",
+		"nextjs",
+		"components",
+		"ui",
+		"tailwind",
+		"tailwindcss",
+		"radix-ui",
+		"typescript",
+		"accessibility",
+		"design-system",
+		"component-library",
+		"react-components",
+		"next15",
+		"react19",
+		"app-router"
+	],
+	"homepage": "https://github.com/yourusername/ui-component-lib#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yourusername/ui-component-lib.git",
+		"directory": "packages/ui"
+	},
+	"bugs": {
+		"url": "https://github.com/yourusername/ui-component-lib/issues"
+	},
+	"author": {
+		"name": "Your Name",
+		"email": "your.email@example.com"
+	},
+	"license": "MIT",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -11,8 +42,12 @@
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js",
 			"require": "./dist/index.cjs"
-		}
+		},
+		"./styles.css": "./dist/styles.css"
 	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
@@ -20,9 +55,6 @@
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"dependencies": {
 		"@radix-ui/react-accordion": "^1.2.12",
 		"@radix-ui/react-avatar": "^1.1.11",

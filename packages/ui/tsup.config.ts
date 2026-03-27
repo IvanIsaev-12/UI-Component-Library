@@ -8,4 +8,6 @@ export default defineConfig({
 	sourcemap: true,
 	clean: true,
 	external: ["react", "react-dom"],
+	// Copy CSS file to dist folder
+	onSuccess: "cp src/styles.css dist/styles.css",
 });

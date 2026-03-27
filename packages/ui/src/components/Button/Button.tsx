@@ -9,17 +9,19 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				primary:
-					"bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-500 dark:bg-primary-500 dark:hover:bg-primary-600",
+					"bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700",
 				secondary:
 					"bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus-visible:ring-neutral-400 dark:bg-neutral-700 dark:text-neutral-50 dark:hover:bg-neutral-600",
 				outline:
-					"bg-transparent border border-neutral-300 hover:bg-neutral-50 text-neutral-900 focus-visible:ring-neutral-400 dark:border-neutral-600 dark:text-neutral-50 dark:hover:bg-neutral-800",
+					"bg-transparent border border-neutral-300 hover:bg-neutral-50 text-neutral-900 focus-visible:ring-neutral-400 dark:border-neutral-600 dark:text-neutral-50 dark:hover:bg-neutral-700",
 				ghost:
 					"hover:bg-neutral-100 text-neutral-900 focus-visible:ring-neutral-400 dark:text-neutral-50 dark:hover:bg-neutral-800",
 				danger:
-					"bg-danger-600 text-white hover:bg-danger-700 focus-visible:ring-danger-500 dark:bg-danger-500 dark:hover:bg-danger-600",
-				success: "bg-success-600 text-white hover:bg-success-700 dark:bg-success-500 dark:hover:bg-success-600",
-				warning: "bg-warning-600 text-white hover:bg-warning-700 focus-visible:ring-warning-500 dark:bg-warning-500 dark:hover:bg-warning-600",
+					"bg-danger-600 text-white hover:bg-danger-700 focus-visible:ring-danger-500 dark:bg-danger-700 dark:hover:bg-danger-800",
+				success:
+					"bg-success-700 text-white hover:bg-success-800 dark:bg-success-700 dark:hover:bg-success-800",
+				warning:
+					"bg-warning-700 text-white hover:bg-warning-800 focus-visible:ring-warning-500 dark:bg-warning-700 dark:text-white dark:hover:bg-warning-800",
 			},
 			size: {
 				sm: "h-8 px-3 text-xs",

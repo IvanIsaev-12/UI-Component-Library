@@ -38,6 +38,7 @@ export const Default: Story = {
         maximum: 100,
         variant: "primary",
         size: "md",
+        label: "Progress",
     },
     render: (args) => (
         <div className="w-[600px]">

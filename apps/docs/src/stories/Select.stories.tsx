@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: () => (
 		<Select>
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
 				<SelectValue placeholder="Select a fruit" />
 			</SelectTrigger>
 			<SelectContent>
@@ -41,7 +41,7 @@ export const Default: Story = {
 export const WithGroups: Story = {
 	render: () => (
 		<Select>
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a timezone">
 				<SelectValue placeholder="Select a timezone" />
 			</SelectTrigger>
 			<SelectContent>
@@ -67,7 +67,7 @@ export const WithGroups: Story = {
 export const WithDefaultValue: Story = {
 	render: () => (
 		<Select defaultValue="banana">
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
 				<SelectValue placeholder="Select a fruit" />
 			</SelectTrigger>
 			<SelectContent>
@@ -83,7 +83,7 @@ export const WithDefaultValue: Story = {
 export const Disabled: Story = {
 	render: () => (
 		<Select disabled>
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
 				<SelectValue placeholder="Select a fruit" />
 			</SelectTrigger>
 			<SelectContent>
@@ -98,7 +98,7 @@ export const Disabled: Story = {
 export const WithDisabledItems: Story = {
 	render: () => (
 		<Select>
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
 				<SelectValue placeholder="Select a fruit" />
 			</SelectTrigger>
 			<SelectContent>
@@ -123,9 +123,9 @@ export const FormExample: Story = {
 		return (
 			<div className="space-y-4 w-[280px]">
 				<div>
-					<label className="text-sm font-medium mb-2 block">Country</label>
+					<label htmlFor="country-select" className="text-sm font-medium mb-2 block">Country</label>
 					<Select value={country} onValueChange={setCountry}>
-						<SelectTrigger>
+						<SelectTrigger id="country-select">
 							<SelectValue placeholder="Select your country" />
 						</SelectTrigger>
 						<SelectContent>
@@ -149,7 +149,7 @@ export const FormExample: Story = {
 export const LongList: Story = {
 	render: () => (
 		<Select>
-			<SelectTrigger className="w-[280px]">
+			<SelectTrigger className="w-[280px]" aria-label="Select a country">
 				<SelectValue placeholder="Select a country" />
 			</SelectTrigger>
 			<SelectContent>
@@ -177,9 +177,9 @@ export const MultipleSelects: Story = {
 	render: () => (
 		<div className="space-y-4">
 			<div className="w-[280px]">
-				<label className="text-sm font-medium mb-2 block">Size</label>
+				<label htmlFor="size-select" className="text-sm font-medium mb-2 block">Size</label>
 				<Select defaultValue="m">
-					<SelectTrigger>
+					<SelectTrigger id="size-select">
 						<SelectValue />
 					</SelectTrigger>
 					<SelectContent>
@@ -193,9 +193,9 @@ export const MultipleSelects: Story = {
 			</div>
 
 			<div className="w-[280px]">
-				<label className="text-sm font-medium mb-2 block">Color</label>
+				<label htmlFor="color-select" className="text-sm font-medium mb-2 block">Color</label>
 				<Select defaultValue="blue">
-					<SelectTrigger>
+					<SelectTrigger id="color-select">
 						<SelectValue />
 					</SelectTrigger>
 					<SelectContent>
@@ -209,9 +209,9 @@ export const MultipleSelects: Story = {
 			</div>
 
 			<div className="w-[280px]">
-				<label className="text-sm font-medium mb-2 block">Quantity</label>
+				<label htmlFor="quantity-select" className="text-sm font-medium mb-2 block">Quantity</label>
 				<Select defaultValue="1">
-					<SelectTrigger>
+					<SelectTrigger id="quantity-select">
 						<SelectValue />
 					</SelectTrigger>
 					<SelectContent>

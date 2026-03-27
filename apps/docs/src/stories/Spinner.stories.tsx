@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Spinner } from "@ui-component-lib/ui";
+import { Spinner, Button, Card } from "@ui-component-lib/ui";
 
 const meta: Meta<typeof Spinner> = {
 	title: "Feedback/Spinner",
@@ -20,6 +20,87 @@ export const Sizes: Story = {
 				<Spinner size="md" />
 				<Spinner size="lg" />
 			</div>
+		);
+	},
+};
+
+export const LoadingButton: Story = {
+	render: () => {
+		const [isLoading, setIsLoading] = React.useState(false);
+
+		const handleClick = () => {
+			setIsLoading(true);
+			setTimeout(() => {
+				setIsLoading(false);
+			}, 3000);
+		};
+
+		return (
+			<div className="flex flex-col gap-4 items-start">
+				<Button
+					onClick={handleClick}
+					disabled={isLoading}
+					className="min-w-[120px]"
+				>
+					{isLoading ? (
+						<div className="flex items-center gap-2">
+							<Spinner size="sm" />
+							<span>Loading...</span>
+						</div>
+					) : (
+						"Submit"
+					)}
+				</Button>
+				<p className="text-sm text-neutral-600 dark:text-neutral-400">
+					Click the button to see the loading state
+				</p>
+			</div>
+		);
+	},
+};
+
+export const DataFetching: Story = {
+	render: () => {
+		const [isLoading, setIsLoading] = React.useState(true);
+		const [data, setData] = React.useState<string | null>(null);
+
+		React.useEffect(() => {
+			const timer = setTimeout(() => {
+				setData("Your data has been loaded successfully!");
+				setIsLoading(false);
+			}, 3000);
+
+			return () => clearTimeout(timer);
+		}, []);
+
+		const handleRefresh = () => {
+			setIsLoading(true);
+			setData(null);
+			setTimeout(() => {
+				setData("Data refreshed at " + new Date().toLocaleTimeString());
+				setIsLoading(false);
+			}, 1500);
+		};
+
+		return (
+			<Card className="p-6 max-w-md">
+				<h3 className="text-lg font-semibold mb-4">Dashboard Data</h3>
+				{isLoading ? (
+					<div className="flex flex-col items-center justify-center py-8 gap-3">
+						<Spinner size="lg" className="text-primary-600" />
+						<p className="text-sm text-neutral-600 dark:text-neutral-400">
+							Fetching data...
+						</p>
+					</div>
+				) : (
+					<div className="space-y-4">
+						<p className="text-neutral-700 dark:text-neutral-300">{data}</p>
+						<Button onClick={handleRefresh} variant="outline" size="sm">
+							Refresh Data
+						</Button>
+					</div>
+				)}
+			</Card>
 		);
 	},
 };

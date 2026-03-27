@@ -37,8 +37,9 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
                     ref={ref}
                     id={radioId}
                     className={cn(radioVariants({ size }),
-                        "border-neutral-300 text-primary-500 cursor-pointer",
+                        "border-neutral-300 text-primary-500 cursor-pointer transition-all duration-200 ease-in-out",
                         "checked:bg-primary-500 checked:border-primary-500",
+                        "checked:animate-radio-pop",
                         className
                     )}
                     {...props}

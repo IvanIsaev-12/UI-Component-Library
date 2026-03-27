@@ -33,9 +33,9 @@ export const Grid: Story = {
 
     render: () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Checkbox label="Candidate 1" />
-            <Checkbox label="Candidate 2" />
-            <Checkbox label="Candidate 3" />
+            <Checkbox label="Candidate 1" id="grid-candidate-1" />
+            <Checkbox label="Candidate 2" id="grid-candidate-2" />
+            <Checkbox label="Candidate 3" id="grid-candidate-3" />
         </div>
     )
 }
@@ -46,7 +46,7 @@ export const TermsAndConditions: Story = {
 
         <div className="max-w-md">
             <Checkbox
-                label="I agree tho the Terms and Conditions"
+                label="I agree to the Terms and Conditions"
                 id="terms"
             />
         </div>
@@ -60,7 +60,7 @@ export const MultiSelect: Story = {
             <Typography variant={"h4"}>
                 Choose your interests
             </Typography>
-            <div className="spacw-y-2">
+            <div className="space-y-2">
                 <Checkbox label="Web Development" id = "web" />
                 <Checkbox label="Game Design" id = "game" />
                 <Checkbox label="Cybersecurity" id = "security" />
