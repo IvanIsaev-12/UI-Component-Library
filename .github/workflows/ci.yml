@@ -19,7 +19,6 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9 # Recommended for Node 24
           standalone: true # Ensures pnpm doesn't need Node yet to install itself
 
       # 2. SETUP NODE SECOND (Remove the cache line here)
