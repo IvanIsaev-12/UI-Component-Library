@@ -49,6 +49,7 @@ jobs:
       - name: Publish to npm
         run: |
           cd packages/ui
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmr
           pnpm publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
