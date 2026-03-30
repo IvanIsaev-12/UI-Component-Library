@@ -13,7 +13,7 @@ on:
 
 permissions:
   contents: write
-  id-token: write
+  id-token: write # Required for Provenance and Trusted Publishing
 
 jobs:
   publish:
@@ -29,7 +29,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 9 
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -50,6 +50,7 @@ jobs:
       - name: Publish to npm
         run: |
           cd packages/ui
-          pnpm publish --access public --no-git-checks
+          # Added --provenance to create a verifiable build link
+          pnpm publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
