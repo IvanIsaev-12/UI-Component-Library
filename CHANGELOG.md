@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2026-03-27
+## [1.0.0] - 2026-02-27
 
 ### Added
 
 #### Components (25 total)
+
 - **Button** - Flexible button with 7 variants (primary, secondary, danger, success, warning, outline, ghost)
 - **Input** - Text input with label, placeholder, and error states
 - **Textarea** - Multi-line text input
@@ -37,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Accordion** - Collapsible content sections
 
 #### Features
+
 - Full TypeScript support with comprehensive type definitions
 - Dark mode support for all components
 - Accessibility testing with jest-axe
@@ -47,6 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Responsive design patterns
 
 #### Development Tools
+
 - Turborepo monorepo setup
 - Storybook 10 documentation
 - Vitest for testing
@@ -55,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pnpm workspace management
 
 #### Documentation
+
 - Complete Storybook documentation (25 story files)
 - Comprehensive README with usage examples
 - Component API documentation
@@ -62,12 +66,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Next.js integration guide
 
 #### Testing
+
 - 26 test files covering all components
 - Unit tests with React Testing Library
 - Accessibility tests with jest-axe
 - 100% component coverage
 
 ### Infrastructure
+
 - Monorepo architecture with apps/ and packages/
 - Build system with tsup
 - CSS distribution via styles.css
@@ -79,6 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
+
 - CI/CD with GitHub Actions
 - Automated releases with changesets
 - Visual regression testing
@@ -96,6 +103,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is the initial release of the UI Component Library, created as a thesis project exploring best practices for building component libraries for Next.js applications.
 
 **Highlights:**
+
 - 25 fully accessible, production-ready components
 - Comprehensive test coverage and documentation
 - Modern tech stack (React 19, Next.js 15, Tailwind CSS 4.0)

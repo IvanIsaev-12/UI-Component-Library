@@ -23,7 +23,9 @@ describe("DropdownMenu", () => {
 			</DropdownMenu>
 		);
 
-		expect(screen.getByRole("button", { name: /open menu/i })).toBeInTheDocument();
+		expect(
+			screen.getByRole("button", { name: /open menu/i })
+		).toBeInTheDocument();
 	});
 
 	it("renders with label and separator", () => {

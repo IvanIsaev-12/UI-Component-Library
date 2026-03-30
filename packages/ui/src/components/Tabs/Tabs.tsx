@@ -2,8 +2,6 @@ import * as React from "react";
 import { cn } from "../../lib/cn";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 
-
-
 const TabsList = React.forwardRef<
 	React.ComponentRef<typeof TabsPrimitive.List>,
 	React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>

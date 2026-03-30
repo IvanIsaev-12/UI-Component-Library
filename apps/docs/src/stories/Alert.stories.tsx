@@ -30,7 +30,9 @@ export const Success: Story = {
 		children: (
 			<>
 				<AlertTitle>Success</AlertTitle>
-				<AlertDescription>Your action was completed successfully.</AlertDescription>
+				<AlertDescription>
+					Your action was completed successfully.
+				</AlertDescription>
 			</>
 		),
 	},
@@ -42,7 +44,9 @@ export const Warning: Story = {
 		children: (
 			<>
 				<AlertTitle>Warning</AlertTitle>
-				<AlertDescription>Please review this important information.</AlertDescription>
+				<AlertDescription>
+					Please review this important information.
+				</AlertDescription>
 			</>
 		),
 	},
@@ -54,7 +58,9 @@ export const Danger: Story = {
 		children: (
 			<>
 				<AlertTitle>Error</AlertTitle>
-				<AlertDescription>An error occurred while processing your request.</AlertDescription>
+				<AlertDescription>
+					An error occurred while processing your request.
+				</AlertDescription>
 			</>
 		),
 	},

@@ -1,14 +1,14 @@
-# UI Component Library
+# Next.js UI Component Library
 
-> A modern, accessible component library for Next.js applications
->
+> A modern UI library of reusable component, built to enhance your Next.js applications
+
 > **Thesis Project**: Building Component Libraries for Next.js
 
 ## 📚 Overview
 
-This is a comprehensive UI component library built as a thesis project exploring best practices for creating production-ready component libraries for Next.js applications. The library features 25 fully accessible, customizable components built with modern web technologies.
+The project is a reusable component library designed to support scalable Next.js applications. It includes 25 customizable UI components that enhance the frontend development experience while ensuring consistency and maintainability across applications.
 
-## 🎯 Project Goals
+## 🚀 Features
 
 1. **Accessibility First** - WCAG 2.1 AA compliant components
 2. **Developer Experience** - Excellent TypeScript support and documentation
@@ -61,6 +61,7 @@ npm install @ui-component-lib/ui
 ## 🎨 Components (25 Total)
 
 ### Primitives (8)
+
 - Button
 - Input
 - Textarea
@@ -71,27 +72,32 @@ npm install @ui-component-lib/ui
 - Typography
 
 ### Forms (4)
+
 - Checkbox
 - Radio
 - Switch
 - Select
 
 ### Layout (3)
+
 - Card
 - Table
 - Skeleton
 
 ### Navigation (3)
+
 - Breadcrumb
 - Tabs
 - DropdownMenu
 
 ### Feedback (3)
+
 - Alert
 - Toast
 - Progress
 
 ### Overlays (4)
+
 - Dialog
 - Popover
 - Tooltip
@@ -185,6 +191,7 @@ Visit `http://localhost:6006` to explore all components.
 ### Component API
 
 Each component is fully documented with:
+
 - Props table with TypeScript types
 - Multiple usage examples
 - Accessibility notes
@@ -228,10 +235,6 @@ npm publish
 - **100% TypeScript** - Full type safety
 - **Accessibility Tested** - All components tested with jest-axe
 
-## 🤝 Contributing
-
-This is a thesis project. For questions or suggestions, please open an issue.
-
 ## 📄 License
 
 MIT License - See LICENSE file for details
@@ -239,13 +242,12 @@ MIT License - See LICENSE file for details
 ## 🔗 Links
 
 - [Component Library Package](./packages/ui)
-- [Storybook Documentation](https://your-storybook-url.vercel.app) *(Deploy pending)*
-- [Next.js Playground](https://your-playground-url.vercel.app) *(Deploy pending)*
+- [Storybook Documentation](https://your-storybook-url.vercel.app) _(Deploy pending)_
+- [Next.js Playground](https://your-playground-url.vercel.app) _(Deploy pending)_
 
 ## 👨‍🎓 Author
 
-Created as a thesis project on "Building Component Libraries for Next.js"
+Author: Ivan Isaev
+University of Pécs – BSc Computer Science
 
 ---
-
-**Built with ❤️ for the Next.js community**

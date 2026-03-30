@@ -24,14 +24,13 @@ const preview: Preview = {
 		withThemeByClassName({
 			themes: {
 				light: "",
-				dark: "dark"
+				dark: "dark",
 			},
 			defaultTheme: "light",
 		}),
 		(Story, context) => {
-
 			const viewMode = context.viewMode;
-			const isDocsMode = viewMode === 'docs';
+			const isDocsMode = viewMode === "docs";
 			const theme = context.globals?.theme || "light";
 			const isDark = theme === "dark" && !isDocsMode;
 
@@ -53,12 +52,18 @@ const preview: Preview = {
 			}
 
 			return (
-				<div className={isDark ? "dark bg-neutral-900 text-neutral-50 flex items-center justify-center min-h-screen" : "bg-white text-neutral-900 flex items-center justify-center min-h-screen"}>
+				<div
+					className={
+						isDark
+							? "dark bg-neutral-900 text-neutral-50 flex items-center justify-center min-h-screen"
+							: "bg-white text-neutral-900 flex items-center justify-center min-h-screen"
+					}
+				>
 					<Story />
 				</div>
 			);
 		},
-	]
+	],
 };
 
 export default preview;

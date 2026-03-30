@@ -39,14 +39,18 @@ Add the component library styles to your app:
 
 ```tsx
 // app/layout.tsx (Next.js App Router)
-import '@ui-component-lib/ui/styles.css'
+import "@ui-component-lib/ui/styles.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
+export default function RootLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
+	return (
+		<html lang="en">
+			<body>{children}</body>
+		</html>
+	);
 }
 ```
 
@@ -57,13 +61,13 @@ Update your `tailwind.config.js` to scan the component library:
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    // Add this line to scan the component library
-    './node_modules/@ui-component-lib/ui/dist/**/*.{js,mjs}',
-  ],
-}
+	content: [
+		"./app/**/*.{js,ts,jsx,tsx}",
+		"./components/**/*.{js,ts,jsx,tsx}",
+		// Add this line to scan the component library
+		"./node_modules/@ui-component-lib/ui/dist/**/*.{js,mjs}",
+	],
+};
 ```
 
 ### 3. Dark Mode (Optional)
@@ -73,9 +77,9 @@ For dark mode support, configure Tailwind with class-based dark mode:
 ```js
 // tailwind.config.js
 module.exports = {
-  darkMode: 'class',
-  // ... rest of config
-}
+	darkMode: "class",
+	// ... rest of config
+};
 ```
 
 Then toggle dark mode by adding/removing the `dark` class on the `<html>` element:
@@ -87,37 +91,37 @@ Then toggle dark mode by adding/removing the `dark` class on the `<html>` elemen
 ## Quick Start
 
 ```tsx
-import { Button, Input, Card, CardHeader, CardTitle, CardContent } from '@ui-component-lib/ui'
+import {
+	Button,
+	Input,
+	Card,
+	CardHeader,
+	CardTitle,
+	CardContent,
+} from "@ui-component-lib/ui";
 
 export default function LoginForm() {
-  return (
-    <Card className="w-96">
-      <CardHeader>
-        <CardTitle>Login</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <Input
-          type="email"
-          label="Email"
-          placeholder="you@example.com"
-        />
-        <Input
-          type="password"
-          label="Password"
-          placeholder="••••••••"
-        />
-        <Button variant="primary" className="w-full">
-          Sign In
-        </Button>
-      </CardContent>
-    </Card>
-  )
+	return (
+		<Card className="w-96">
+			<CardHeader>
+				<CardTitle>Login</CardTitle>
+			</CardHeader>
+			<CardContent className="space-y-4">
+				<Input type="email" label="Email" placeholder="you@example.com" />
+				<Input type="password" label="Password" placeholder="••••••••" />
+				<Button variant="primary" className="w-full">
+					Sign In
+				</Button>
+			</CardContent>
+		</Card>
+	);
 }
 ```
 
 ## Available Components
 
 ### Primitives
+
 - **Button** - Flexible button component with variants
 - **Input** - Text input with label and error states
 - **Textarea** - Multi-line text input
@@ -128,27 +132,32 @@ export default function LoginForm() {
 - **Typography** - Text elements with variants
 
 ### Form Components
+
 - **Checkbox** - Checkbox with label
 - **Radio** - Radio button groups
 - **Switch** - Toggle switch
 - **Select** - Dropdown select menu
 
 ### Layout
+
 - **Card** - Content container with header, body, and footer
 - **Table** - Data table with header and rows
 - **Skeleton** - Loading placeholder
 
 ### Navigation
+
 - **Breadcrumb** - Hierarchical navigation
 - **Tabs** - Tab navigation with panels
 - **DropdownMenu** - Context menu with items
 
 ### Feedback
+
 - **Alert** - Notification messages
 - **Toast** - Temporary notifications
 - **Progress** - Progress indicator
 
 ### Overlays
+
 - **Dialog** - Modal dialog
 - **Popover** - Floating content container
 - **Tooltip** - Hover information
@@ -212,46 +221,52 @@ import { Checkbox, Radio, Switch, Select } from '@ui-component-lib/ui'
 ### Toast Notifications
 
 ```tsx
-import { ToastProvider, useToast, Button } from '@ui-component-lib/ui'
+import { ToastProvider, useToast, Button } from "@ui-component-lib/ui";
 
 function App() {
-  return (
-    <ToastProvider>
-      <MyComponent />
-    </ToastProvider>
-  )
+	return (
+		<ToastProvider>
+			<MyComponent />
+		</ToastProvider>
+	);
 }
 
 function MyComponent() {
-  const { displayToast } = useToast()
+	const { displayToast } = useToast();
 
-  return (
-    <Button onClick={() => displayToast('Operation successful!', 'success')}>
-      Show Toast
-    </Button>
-  )
+	return (
+		<Button onClick={() => displayToast("Operation successful!", "success")}>
+			Show Toast
+		</Button>
+	);
 }
 ```
 
 ### Dialog (Modal)
 
 ```tsx
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, Button } from '@ui-component-lib/ui'
+import {
+	Dialog,
+	DialogTrigger,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+	DialogDescription,
+	Button,
+} from "@ui-component-lib/ui";
 
 <Dialog>
-  <DialogTrigger asChild>
-    <Button>Open Dialog</Button>
-  </DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Confirm Action</DialogTitle>
-      <DialogDescription>
-        Are you sure you want to proceed?
-      </DialogDescription>
-    </DialogHeader>
-    {/* Dialog content */}
-  </DialogContent>
-</Dialog>
+	<DialogTrigger asChild>
+		<Button>Open Dialog</Button>
+	</DialogTrigger>
+	<DialogContent>
+		<DialogHeader>
+			<DialogTitle>Confirm Action</DialogTitle>
+			<DialogDescription>Are you sure you want to proceed?</DialogDescription>
+		</DialogHeader>
+		{/* Dialog content */}
+	</DialogContent>
+</Dialog>;
 ```
 
 ## Customization
@@ -259,21 +274,17 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, Dialog
 All components accept a `className` prop for custom styling:
 
 ```tsx
-<Button className="rounded-full px-8 py-4 text-lg">
-  Custom Styled Button
-</Button>
+<Button className="rounded-full px-8 py-4 text-lg">Custom Styled Button</Button>
 ```
 
 ### Using Tailwind Utilities
 
 ```tsx
 <Card className="max-w-md mx-auto shadow-2xl">
-  <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-500">
-    <CardTitle className="text-white">Gradient Header</CardTitle>
-  </CardHeader>
-  <CardContent className="space-y-4 p-6">
-    {/* Content */}
-  </CardContent>
+	<CardHeader className="bg-gradient-to-r from-blue-500 to-purple-500">
+		<CardTitle className="text-white">Gradient Header</CardTitle>
+	</CardHeader>
+	<CardContent className="space-y-4 p-6">{/* Content */}</CardContent>
 </Card>
 ```
 
@@ -292,11 +303,11 @@ All components follow WAI-ARIA best practices:
 Full TypeScript support with exported types:
 
 ```tsx
-import type { ButtonProps, InputProps, CardProps } from '@ui-component-lib/ui'
+import type { ButtonProps, InputProps, CardProps } from "@ui-component-lib/ui";
 
 const MyButton: React.FC<ButtonProps> = (props) => {
-  return <Button {...props} />
-}
+	return <Button {...props} />;
+};
 ```
 
 ## Browser Support
@@ -314,16 +325,16 @@ Most components work with Next.js Server Components:
 
 ```tsx
 // app/page.tsx (Server Component)
-import { Card, CardHeader, CardTitle } from '@ui-component-lib/ui'
+import { Card, CardHeader, CardTitle } from "@ui-component-lib/ui";
 
 export default function Page() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Server Component</CardTitle>
-      </CardHeader>
-    </Card>
-  )
+	return (
+		<Card>
+			<CardHeader>
+				<CardTitle>Server Component</CardTitle>
+			</CardHeader>
+		</Card>
+	);
 }
 ```
 
@@ -332,18 +343,18 @@ export default function Page() {
 Interactive components require `'use client'`:
 
 ```tsx
-'use client'
+"use client";
 
-import { Button, useToast } from '@ui-component-lib/ui'
+import { Button, useToast } from "@ui-component-lib/ui";
 
 export default function ClientComponent() {
-  const { displayToast } = useToast()
+	const { displayToast } = useToast();
 
-  return (
-    <Button onClick={() => displayToast('Clicked!', 'success')}>
-      Click Me
-    </Button>
-  )
+	return (
+		<Button onClick={() => displayToast("Clicked!", "success")}>
+			Click Me
+		</Button>
+	);
 }
 ```
 

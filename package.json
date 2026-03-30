@@ -3,11 +3,23 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
+		"build:ui": "turbo run build --filter=@ui-component-lib/ui",
+		"build:docs": "pnpm build:ui && turbo run build --filter=docs",
 		"dev": "turbo run dev",
+		"dev:docs": "turbo run dev --filter=docs",
+		"dev:profile": "turbo run dev --filter=profile",
+		"dev:cv": "turbo run dev --filter=cv-app",
+		"dev:all": "turbo run dev --filter=docs --filter=profile --filter=cv-app",
 		"lint": "turbo run lint",
 		"test": "turbo run test",
+		"test:ui": "turbo run test --filter=@ui-component-lib/ui",
 		"typecheck": "turbo run typecheck",
-		"storybook": "turbo run storybook"
+		"storybook": "turbo run storybook",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+		"format:check": "prettier --check \"**/*.{ts,tsx,md,json}\"",
+		"check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build:ui",
+		"release": "pnpm check && pnpm --filter=@ui-component-lib/ui publish"
 	},
 	"devDependencies": {
 		"prettier": "^3.4.2",

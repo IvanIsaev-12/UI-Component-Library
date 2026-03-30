@@ -31,7 +31,9 @@ describe("Popover", () => {
 
 		const trigger = screen.getByRole("button", { name: /click me/i });
 
-		expect(screen.queryByText(/this is the popover content/i)).not.toBeInTheDocument();
+		expect(
+			screen.queryByText(/this is the popover content/i)
+		).not.toBeInTheDocument();
 
 		await user.click(trigger);
 
@@ -67,9 +69,7 @@ describe("Popover", () => {
 		render(
 			<Popover>
 				<PopoverTrigger>Open</PopoverTrigger>
-				<PopoverContent className="custom-class">
-					Custom content
-				</PopoverContent>
+				<PopoverContent className="custom-class">Custom content</PopoverContent>
 			</Popover>
 		);
 

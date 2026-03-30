@@ -16,8 +16,7 @@ const spinnerVariants = cva("animate-spin", {
 });
 
 export interface SpinnerProps
-	extends VariantProps<typeof spinnerVariants>,
-		React.SVGProps<SVGSVGElement> {
+	extends VariantProps<typeof spinnerVariants>, React.SVGProps<SVGSVGElement> {
 	className?: string;
 }
 

@@ -15,7 +15,9 @@ describe("Badge", () => {
 		["danger", "bg-danger-200"],
 	])("renders %s variant correctly", (variant, expectedClass) => {
 		render(<Badge variant={variant as any}>{variant}</Badge>);
-		expect(screen.getByText(new RegExp(variant, "i"))).toHaveClass(expectedClass);
+		expect(screen.getByText(new RegExp(variant, "i"))).toHaveClass(
+			expectedClass
+		);
 	});
 
 	it("has no a11y violations", async () => {

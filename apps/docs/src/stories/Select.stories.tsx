@@ -123,7 +123,12 @@ export const FormExample: Story = {
 		return (
 			<div className="space-y-4 w-[280px]">
 				<div>
-					<label htmlFor="country-select" className="text-sm font-medium mb-2 block">Country</label>
+					<label
+						htmlFor="country-select"
+						className="text-sm font-medium mb-2 block"
+					>
+						Country
+					</label>
 					<Select value={country} onValueChange={setCountry}>
 						<SelectTrigger id="country-select">
 							<SelectValue placeholder="Select your country" />
@@ -177,7 +182,9 @@ export const MultipleSelects: Story = {
 	render: () => (
 		<div className="space-y-4">
 			<div className="w-[280px]">
-				<label htmlFor="size-select" className="text-sm font-medium mb-2 block">Size</label>
+				<label htmlFor="size-select" className="text-sm font-medium mb-2 block">
+					Size
+				</label>
 				<Select defaultValue="m">
 					<SelectTrigger id="size-select">
 						<SelectValue />
@@ -193,7 +200,12 @@ export const MultipleSelects: Story = {
 			</div>
 
 			<div className="w-[280px]">
-				<label htmlFor="color-select" className="text-sm font-medium mb-2 block">Color</label>
+				<label
+					htmlFor="color-select"
+					className="text-sm font-medium mb-2 block"
+				>
+					Color
+				</label>
 				<Select defaultValue="blue">
 					<SelectTrigger id="color-select">
 						<SelectValue />
@@ -209,7 +221,12 @@ export const MultipleSelects: Story = {
 			</div>
 
 			<div className="w-[280px]">
-				<label htmlFor="quantity-select" className="text-sm font-medium mb-2 block">Quantity</label>
+				<label
+					htmlFor="quantity-select"
+					className="text-sm font-medium mb-2 block"
+				>
+					Quantity
+				</label>
 				<Select defaultValue="1">
 					<SelectTrigger id="quantity-select">
 						<SelectValue />

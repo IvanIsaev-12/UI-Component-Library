@@ -5,7 +5,6 @@ import { Toast } from "./Toast";
 import { axe } from "jest-axe";
 
 describe("Toast", () => {
-
 	it("renders toast with message", () => {
 		const onClose = vi.fn();
 		render(<Toast message="Test" onClose={onClose} />);

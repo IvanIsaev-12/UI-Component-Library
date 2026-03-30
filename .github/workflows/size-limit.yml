@@ -1,0 +1,4 @@
+- name: Check bundle size
+  run: |
+    cd packages/ui/dist
+    du -sh .

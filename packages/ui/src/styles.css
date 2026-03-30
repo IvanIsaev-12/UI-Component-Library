@@ -1,17 +1,14 @@
-@import "tailwindcss";
-@plugin "tailwindcss-animate";
-
 /**
- * UI Component Library - Base Styles
+ * UI Component Library - Theme Variables & Styles
  *
- * Import this file in your Next.js app to get all the theme colors and styles
- * needed for the component library to work correctly.
+ * This file contains all theme variables, colors, and animations for the component library.
+ * Import this file in your app AFTER Tailwind imports.
  *
- * Usage:
- * import '@ui-component-lib/ui/styles.css'
+ * Usage in your globals.css:
+ * @import "tailwindcss";
+ * @plugin "tailwindcss-animate";
+ * @import "@ui-component-lib/ui/styles.css";
  */
-
-@variant dark (&:where(.dark, .dark *));
 
 @theme {
 	/* Primary Colors - Blue */
@@ -25,6 +22,7 @@
 	--color-primary-700: #1d4ed8;
 	--color-primary-800: #1e40af;
 	--color-primary-900: #1e3a8a;
+	--color-primary-950: #172554;
 
 	/* Neutral Colors - Zinc */
 	--color-neutral-50: #fafafa;
@@ -39,6 +37,7 @@
 	--color-neutral-900: #18181b;
 
 	/* Danger Colors - Red */
+	--color-danger-50: #fef2f2;
 	--color-danger-100: #fee2e2;
 	--color-danger-200: #fecaca;
 	--color-danger-300: #fca5a5;
@@ -48,8 +47,10 @@
 	--color-danger-700: #b91c1c;
 	--color-danger-800: #991b1b;
 	--color-danger-900: #7f1d1d;
+	--color-danger-950: #450a0a;
 
 	/* Success Colors - Green */
+	--color-success-50: #f0fdf4;
 	--color-success-100: #dcfce7;
 	--color-success-200: #bbf7d0;
 	--color-success-300: #86efac;
@@ -59,6 +60,7 @@
 	--color-success-700: #15803d;
 	--color-success-800: #166534;
 	--color-success-900: #14532d;
+	--color-success-950: #052e16;
 
 	/* Warning Colors - Amber */
 	--color-warning-100: #fef3c7;
@@ -171,7 +173,7 @@
 }
 
 /* Override semantic colors in dark mode */
-html.dark {
+.dark {
 	--color-foreground: #fafafa;
 	--color-foreground-muted: #a1a1aa;
 	--color-foreground-subtle: #71717a;

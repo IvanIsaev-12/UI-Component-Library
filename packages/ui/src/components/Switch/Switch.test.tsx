@@ -67,7 +67,10 @@ describe("Switch", () => {
 		const { container } = render(
 			<div className="flex items-center gap-2">
 				<Switch id="mobile-data" />
-				<label htmlFor="mobile-data" className="text-sm font-medium cursor-pointer">
+				<label
+					htmlFor="mobile-data"
+					className="text-sm font-medium cursor-pointer"
+				>
 					Mobile Data
 				</label>
 			</div>

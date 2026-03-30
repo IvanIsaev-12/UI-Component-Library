@@ -1,7 +1,14 @@
 /// <reference types="@testing-library/jest-dom" />
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator, BreadcrumbPage } from "./Breadcrumb";
+import {
+	Breadcrumb,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbList,
+	BreadcrumbSeparator,
+	BreadcrumbPage,
+} from "./Breadcrumb";
 import { axe } from "jest-axe";
 
 describe("Breadcrumb", () => {
@@ -10,21 +17,15 @@ describe("Breadcrumb", () => {
 			<Breadcrumb>
 				<BreadcrumbList>
 					<BreadcrumbItem>
-						<BreadcrumbLink href="/">
-							Home
-						</BreadcrumbLink>
+						<BreadcrumbLink href="/">Home</BreadcrumbLink>
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbLink href="/news">
-							News
-						</BreadcrumbLink>
+						<BreadcrumbLink href="/news">News</BreadcrumbLink>
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
-						<BreadcrumbPage>
-							Help
-						</BreadcrumbPage>
+						<BreadcrumbPage>Help</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
@@ -32,7 +33,6 @@ describe("Breadcrumb", () => {
 		const navig = screen.getByRole("navigation");
 		expect(navig).toBeInTheDocument();
 		expect(navig).toHaveAttribute("aria-label", "breadcrumb");
-		
 	});
 	it("renders custom separator", () => {
 		render(

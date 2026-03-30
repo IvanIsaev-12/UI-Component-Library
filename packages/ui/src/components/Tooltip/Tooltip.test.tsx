@@ -1,7 +1,12 @@
 /// <reference types="@testing-library/jest-dom" />
 import { vi, describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./Tooltip";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "./Tooltip";
 import userEvent from "@testing-library/user-event";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { Button } from "../Button";

@@ -7,7 +7,15 @@ import { axe, toHaveNoViolations } from "jest-axe";
 
 describe("Progress", () => {
 	it("renders progress element", () => {
-		render(<Progress value={60} maximum={100} variant="primary" size="md" aria-label="Progress" />);
+		render(
+			<Progress
+				value={60}
+				maximum={100}
+				variant="primary"
+				size="md"
+				aria-label="Progress"
+			/>
+		);
 
 		const progress = screen.getByRole("progressbar");
 		expect(progress).toBeInTheDocument();
@@ -52,7 +60,15 @@ describe("Progress", () => {
 	});
 
 	it("has no a11y violations", async () => {
-		const { container } = render(<Progress value={60} maximum={100} variant="primary" size="md" aria-label="Progress" />);
+		const { container } = render(
+			<Progress
+				value={60}
+				maximum={100}
+				variant="primary"
+				size="md"
+				aria-label="Progress"
+			/>
+		);
 
 		const results = await axe(container);
 		expect(results).toHaveNoViolations();

@@ -1,15 +1,26 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { axe } from "jest-axe";
-import { Card, CardTitle, CardContent, CardDescription, CardFooter, CardHeader } from "./Card";
+import {
+	Card,
+	CardTitle,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+} from "./Card";
 
 describe("Card", () => {
 	it.each([
 		["Card Title", <CardTitle>Title</CardTitle>, "Title"],
 		["Card Content", <CardContent>Content</CardContent>, "Content"],
 		["Card Header", <CardHeader>Header</CardHeader>, "Header"],
-		["Card Description", <CardDescription>Description</CardDescription>, "Description"],
-		["Card Footer", <CardFooter>Footer</CardFooter>, "Footer"]
+		[
+			"Card Description",
+			<CardDescription>Description</CardDescription>,
+			"Description",
+		],
+		["Card Footer", <CardFooter>Footer</CardFooter>, "Footer"],
 	])("render %s", (_name, component, text) => {
 		render(<Card>{component}</Card>);
 		expect(screen.getByText(new RegExp(text, "i"))).toBeInTheDocument();
@@ -32,7 +43,6 @@ describe("Card", () => {
 		expect(screen.getByText(/test content/i)).toBeInTheDocument();
 		expect(screen.getByText(/test footer/i)).toBeInTheDocument();
 	});
-
 
 	it("has no a11y violations with all components", async () => {
 		const { container } = render(

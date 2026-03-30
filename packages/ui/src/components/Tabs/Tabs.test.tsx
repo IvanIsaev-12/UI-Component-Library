@@ -10,9 +10,15 @@ describe("Tabs", () => {
 		render(
 			<Tabs defaultValue="overview" className="w-[450px]">
 				<TabsList className="w-[450px]!">
-					<TabsTrigger value="overview" className="flex-1">Overview</TabsTrigger>
-					<TabsTrigger value="analytics" className="flex-1">Analytics</TabsTrigger>
-					<TabsTrigger value="reports" className="flex-1">Reports</TabsTrigger>
+					<TabsTrigger value="overview" className="flex-1">
+						Overview
+					</TabsTrigger>
+					<TabsTrigger value="analytics" className="flex-1">
+						Analytics
+					</TabsTrigger>
+					<TabsTrigger value="reports" className="flex-1">
+						Reports
+					</TabsTrigger>
 				</TabsList>
 				<TabsContent value="overview" className="mt-4">
 					<p className="text-sm text-neutral-600">
@@ -109,12 +115,18 @@ describe("Tabs", () => {
 	});
 
 	it("has no a11y violations", async () => {
-		const {container} = render(
+		const { container } = render(
 			<Tabs defaultValue="overview" className="w-[450px]">
 				<TabsList className="w-[450px]!">
-					<TabsTrigger value="overview" className="flex-1">Overview</TabsTrigger>
-					<TabsTrigger value="analytics" className="flex-1">Analytics</TabsTrigger>
-					<TabsTrigger value="reports" className="flex-1">Reports</TabsTrigger>
+					<TabsTrigger value="overview" className="flex-1">
+						Overview
+					</TabsTrigger>
+					<TabsTrigger value="analytics" className="flex-1">
+						Analytics
+					</TabsTrigger>
+					<TabsTrigger value="reports" className="flex-1">
+						Reports
+					</TabsTrigger>
 				</TabsList>
 				<TabsContent value="overview" className="mt-4">
 					<p className="text-sm text-neutral-600">
@@ -136,6 +148,5 @@ describe("Tabs", () => {
 
 		const result = await axe(container);
 		expect(result).toHaveNoViolations();
-
 	});
 });

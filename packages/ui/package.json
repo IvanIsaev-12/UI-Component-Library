@@ -46,7 +46,15 @@
 		"./styles.css": "./dist/styles.css"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"sideEffects": [
+		"*.css"
 	],
 	"scripts": {
 		"build": "tsup",
@@ -77,9 +85,9 @@
 		"@testing-library/react": "^16.1.0",
 		"@testing-library/user-event": "^14.5.2",
 		"@types/jest-axe": "^3.5.9",
+		"@types/node": "^25.5.0",
 		"@types/react": "^19.0.6",
 		"@ui-component-lib/eslint-config": "workspace:*",
-		"@ui-component-lib/tsconfig": "workspace:*",
 		"@vitest/coverage-v8": "^2.1.8",
 		"jest-axe": "^10.0.0",
 		"jsdom": "^26.0.0",

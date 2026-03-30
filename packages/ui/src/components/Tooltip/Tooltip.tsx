@@ -22,31 +22,30 @@ const Tooltip = TooltipPrimitive.Root;
 
 const TooltipTrigger = TooltipPrimitive.Trigger;
 
-
-interface TooltipContentProps extends
-    React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> {
-    sideOffset?: number;
-    arrow?: boolean;
+interface TooltipContentProps extends React.ComponentPropsWithoutRef<
+	typeof TooltipPrimitive.Content
+> {
+	sideOffset?: number;
+	arrow?: boolean;
 }
 
-
 const TooltipContent = React.forwardRef<
-    React.ComponentRef<typeof TooltipPrimitive.Content>,
-    TooltipContentProps
+	React.ComponentRef<typeof TooltipPrimitive.Content>,
+	TooltipContentProps
 >(({ className, sideOffset = 4, arrow, children, ...props }, ref) => (
-    <TooltipPrimitive.Portal>
-        <TooltipPrimitive.Content
-            ref={ref}
-            sideOffset={sideOffset}
-            className={cn(tooltipContentStyles, className)}
-            {...props}
-        >
-            {children}
-            {arrow && (
-                <TooltipPrimitive.Arrow className="size-2.5 translate-y-[calc(-50%-2px)] rotate-45 rounded-[2px] bg-neutral-900 dark:bg-neutral-100 fill-neutral-900 dark:fill-neutral-100" />
-            )}
-        </TooltipPrimitive.Content>
-    </TooltipPrimitive.Portal>
+	<TooltipPrimitive.Portal>
+		<TooltipPrimitive.Content
+			ref={ref}
+			sideOffset={sideOffset}
+			className={cn(tooltipContentStyles, className)}
+			{...props}
+		>
+			{children}
+			{arrow && (
+				<TooltipPrimitive.Arrow className="size-2.5 translate-y-[calc(-50%-2px)] rotate-45 rounded-[2px] bg-neutral-900 dark:bg-neutral-100 fill-neutral-900 dark:fill-neutral-100" />
+			)}
+		</TooltipPrimitive.Content>
+	</TooltipPrimitive.Portal>
 ));
 
 TooltipContent.displayName = "TooltipContent";

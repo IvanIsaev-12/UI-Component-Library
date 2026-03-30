@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/cn";
@@ -8,27 +10,30 @@ const toastVariants = cva(
 	{
 		variants: {
 			variant: {
-				default: "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 border-neutral-200 dark:border-neutral-700",
-				success: "bg-success-100 dark:bg-success-900 text-success-800 dark:text-success-100 border-success-200 dark:border-success-800",
-				error: "bg-danger-100 dark:bg-danger-900 text-danger-800 dark:text-danger-100 border-danger-200 dark:border-danger-800",
-				warning: "bg-warning-100 dark:bg-warning-900 text-warning-900 dark:text-warning-100 border-warning-200 dark:border-warning-800"
+				default:
+					"bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 border-neutral-200 dark:border-neutral-700",
+				success:
+					"bg-success-100 dark:bg-success-900 text-success-800 dark:text-success-100 border-success-200 dark:border-success-800",
+				error:
+					"bg-danger-100 dark:bg-danger-900 text-danger-800 dark:text-danger-100 border-danger-200 dark:border-danger-800",
+				warning:
+					"bg-warning-100 dark:bg-warning-900 text-warning-900 dark:text-warning-100 border-warning-200 dark:border-warning-800",
 			},
 			animation: {
 				enter: "animate-slide-in-right opacity-100",
-				exit: "animate-slide-out-right opacity-0"
-			}
+				exit: "animate-slide-out-right opacity-0",
+			},
 		},
 		defaultVariants: {
 			variant: "default",
-			animation: "enter"
-		}
+			animation: "enter",
+		},
 	}
-)
-
+);
 
 interface ToastProps extends VariantProps<typeof toastVariants> {
-	message: string,
-	onClose: () => void
+	message: string;
+	onClose: () => void;
 }
 
 const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
@@ -39,13 +44,15 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 			setIsExiting(true);
 			setTimeout(() => {
 				onClose();
-			}, 300); 
+			}, 300);
 		};
 
 		return (
 			<div
 				ref={ref}
-				className={cn(toastVariants({ variant, animation: isExiting ? "exit" : "enter" }))}
+				className={cn(
+					toastVariants({ variant, animation: isExiting ? "exit" : "enter" })
+				)}
 				{...props}
 			>
 				<span className="flex-1">{message}</span>

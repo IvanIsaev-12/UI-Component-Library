@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* 1. Tell Tailwind to scan your UI library folder */
+/* Adjust the dots depending on where your library is relative to this CSS file */
+@source "../../../../packages/ui";
+/* 2. Your theme variables from before */
+@import "@ui-component-lib/ui/styles.css";
+
+/**
+ * Playground App Styles
+ *
+ * The component library styles are imported above, which includes:
+ * - All theme variables (colors, spacing, etc.)
+ * - Component-specific styles
+ * - Animation keyframes
+ * - Dark mode overrides
+ */
