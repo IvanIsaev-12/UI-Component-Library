@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2026-02-27
+## [1.0.0] - 2026-03-27
 
 ### Added
 
@@ -80,34 +80,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - npm package exports configuration
 - MIT License
 
----
-
-## [Unreleased]
-
-### Planned
-
-- CI/CD with GitHub Actions
-- Automated releases with changesets
-- Visual regression testing
-- Performance benchmarks
-- Additional components (DatePicker, ComboBox, etc.)
-- Figma design system
-- Component playground examples
-
----
-
-## Release Notes
-
-### v1.0.0 - Initial Release
-
-This is the initial release of the UI Component Library, created as a thesis project exploring best practices for building component libraries for Next.js applications.
-
-**Highlights:**
-
-- 25 fully accessible, production-ready components
-- Comprehensive test coverage and documentation
-- Modern tech stack (React 19, Next.js 15, Tailwind CSS 4.0)
-- Excellent developer experience with TypeScript
-- Ready for npm publishing
-
-For detailed usage instructions, see the [README](./README.md) and [component documentation](./packages/ui/README.md).
