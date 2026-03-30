@@ -15,15 +15,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js & pnpm
+      # 1. SETUP PNPM FIRST (Use v4 for Node 24 compatibility)
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # Recommended for Node 24
+          standalone: true # Ensures pnpm doesn't need Node yet to install itself
+
+      # 2. SETUP NODE SECOND (Remove the cache line here)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'pnpm'
+          # We handle caching via pnpm's own action or manual steps to avoid the "Unable to locate" error
 
-      - uses: pnpm/action-setup@v3
+      # 3. USE PNPM TO CACHE (Modern 2026 approach)
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
         with:
-          version: 8
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
