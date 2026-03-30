@@ -20,18 +20,18 @@
 		"react19",
 		"app-router"
 	],
-	"homepage": "https://github.com/yourusername/ui-component-lib#readme",
+	"homepage": "https://github.com/IvanIsaev-12/UI-Component-Library#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/yourusername/ui-component-lib.git",
+		"url": "https://github.com/IvanIsaev-12/UI-Component-Library.git",
 		"directory": "packages/ui"
 	},
 	"bugs": {
-		"url": "https://github.com/yourusername/ui-component-lib/issues"
+		"url": "https://github.com/yourusername/UI-Component-Library/issues"
 	},
 	"author": {
-		"name": "Your Name",
-		"email": "your.email@example.com"
+		"name": "Ivan Isaev",
+		"email": "pochta_cheloveka@yahoo.com"
 	},
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -51,7 +51,8 @@
 		"LICENSE"
 	],
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"provenance": "true"
 	},
 	"sideEffects": [
 		"*.css"
