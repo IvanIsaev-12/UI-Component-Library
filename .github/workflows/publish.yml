@@ -22,16 +22,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9 
-
+      # 1️⃣ Setup Node.js first
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
+
+      # 2️⃣ Setup pnpm AFTER Node.js
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 3️⃣ Verify pnpm is available
+      - name: Verify pnpm
+        run: |
+          which pnpm
+          pnpm -v
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -45,7 +53,6 @@ jobs:
       - name: Publish to npm
         run: |
           cd packages/ui
-          # Added --provenance to create a verifiable build link
           pnpm publish --access public --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
