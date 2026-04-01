@@ -172,7 +172,7 @@ export default function CVPage() {
 						<Button
 							variant="secondary"
 							size="lg"
-							className="border-white text-white hover:bg-white/10"
+							className=""
 						>
 							<svg
 								className="w-5 h-5 mr-2"
@@ -375,7 +375,7 @@ export default function CVPage() {
 									</div>
 									<p className="text-sm text-foreground-muted mb-1">Email</p>
 									<p className="text-foreground font-medium">
-										john@example.com
+										ivan.a.isaev@gmail.com
 									</p>
 								</div>
 								<div className="group">
@@ -396,7 +396,7 @@ export default function CVPage() {
 									</div>
 									<p className="text-sm text-foreground-muted mb-1">Phone</p>
 									<p className="text-foreground font-medium">
-										+1 (555) 123-4567
+										+36 11 192 1234
 									</p>
 								</div>
 								<div className="group">
@@ -423,7 +423,7 @@ export default function CVPage() {
 									</div>
 									<p className="text-sm text-foreground-muted mb-1">Location</p>
 									<p className="text-foreground font-medium">
-										San Francisco, CA
+										Pécs, Hungary
 									</p>
 								</div>
 							</div>
@@ -436,7 +436,7 @@ export default function CVPage() {
 			<footer className="bg-background-muted py-8 mt-16 border-t border-border">
 				<div className="max-w-4xl mx-auto px-6 text-center">
 					<p className="text-sm text-foreground-subtle">
-						© 2024 John Doe. Built with React, Next.js, and UI Component
+						© 2025-2026 Ivan Isaev Built with React, Next.js, and UI Component
 						Library.
 					</p>
 					<div className="flex justify-center gap-4 mt-4">

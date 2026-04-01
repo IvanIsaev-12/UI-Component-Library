@@ -14,7 +14,7 @@ const badgeVariants = cva(
 				warning:
 					"bg-warning-200 text-warning-800 dark:bg-warning-900 dark:text-warning-200",
 				neutral:
-					"bg-neutral-200 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200",
+					"bg-background-muted text-foreground-muted",
 				danger:
 					"bg-danger-200 text-danger-800 dark:bg-danger-900 dark:text-danger-200",
 			},

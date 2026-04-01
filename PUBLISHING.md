@@ -147,20 +147,20 @@ You can also trigger publishing manually:
 
 ### Automatic Deployment (Recommended)
 
-Storybook automatically deploys to GitHub Pages on every push to `main`:
+Storybook automatically deploys to GitHub Pages on every push to `dev` branch:
 
 1. **Enable GitHub Pages**:
    - Go to Settings → Pages
    - Source: "GitHub Actions"
 
-2. **Push to main**:
+2. **Push to dev**:
 
    ```bash
-   git push origin main
+   git push origin dev
    ```
 
 3. **Access Storybook**:
-   - URL: `https://yourusername.github.io/ui-component-lib/`
+   - URL: `https://ivanisaev-12.github.io/ui-component-lib/`
 
 ### Manual Deployment
 

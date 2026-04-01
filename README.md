@@ -1,6 +1,6 @@
 # Next.js UI Component Library
 
-> A modern UI library of reusable component, built to enhance your Next.js applications
+> A modern UI library of reusable components, built to enhance your Next.js applications
 
 > **Thesis Project**: Building Component Libraries for Next.js
 
@@ -23,7 +23,8 @@ This project uses a **Turborepo monorepo** structure:
 ui-component-lib/
 ├── apps/
 │   ├── docs/         # Storybook documentation
-│   └── playground/   # Next.js 15 demo application
+│   ├── profile/      # Profile demo application
+│   └── cv-app/       # CV/Resume demo application
 └── packages/
     ├── ui/           # Main component library (published to npm)
     ├── eslint-config # Shared ESLint configuration
@@ -108,7 +109,7 @@ npm install @ui-component-lib/ui
 ### Prerequisites
 
 - Node.js 18+
-- pnpm 8+
+- pnpm 10+
 
 ### Getting Started
 
@@ -134,8 +135,9 @@ pnpm dev
 # Run Storybook only
 pnpm storybook
 
-# Run Next.js playground only
-cd apps/playground && pnpm dev
+# Run demo applications
+pnpm dev:profile      # Profile app (port 3001)
+pnpm dev:cv           # CV app (port 3002)
 ```
 
 ### Available Scripts
@@ -143,21 +145,29 @@ cd apps/playground && pnpm dev
 ```bash
 # Development
 pnpm dev              # Start all apps in dev mode
-pnpm storybook        # Start Storybook documentation
+pnpm dev:docs         # Start Storybook documentation
+pnpm dev:profile      # Start profile demo app (port 3001)
+pnpm dev:cv           # Start CV demo app (port 3002)
+pnpm dev:all          # Start all demo apps
 
 # Build
 pnpm build            # Build all packages and apps
-pnpm build --filter=@ui-component-lib/ui  # Build UI package only
+pnpm build:ui         # Build UI package only
+pnpm build:docs       # Build Storybook
 
 # Testing
 pnpm test             # Run all tests
-pnpm test:coverage    # Run tests with coverage
+pnpm test:ui          # Run UI package tests only
 
 # Type Checking
 pnpm typecheck        # Type check all packages
 
 # Linting
 pnpm lint             # Lint all packages
+
+# Other
+pnpm format           # Format code with Prettier
+pnpm check            # Run all checks (lint, typecheck, test, build)
 ```
 
 ## 🧪 Testing
@@ -183,6 +193,8 @@ Current coverage: **26 test files** covering all 25 components
 Interactive component documentation with live examples:
 
 ```bash
+pnpm dev:docs
+# or
 pnpm storybook
 ```
 
@@ -242,8 +254,9 @@ MIT License - See LICENSE file for details
 ## 🔗 Links
 
 - [Component Library Package](./packages/ui)
-- [Storybook Documentation](https://your-storybook-url.vercel.app) _(Deploy pending)_
-- [Next.js Playground](https://your-playground-url.vercel.app) _(Deploy pending)_
+- [Storybook Documentation](https://ivanisaev-12.github.io/ui-component-lib/) _(Auto-deployed from dev branch)_
+- [npm Package](https://www.npmjs.com/package/@ui-component-lib/ui)
+- [GitHub Repository](https://github.com/IvanIsaev-12/UI-Component-Library)
 
 ## 👨‍🎓 Author
 

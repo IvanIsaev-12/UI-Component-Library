@@ -11,7 +11,7 @@ const Divider = React.forwardRef<HTMLHRElement, DividerProps>(
 			<hr
 				ref={ref}
 				className={cn(
-					"border-neutral-300 dark:border-neutral-700",
+					"border-border",
 					orientation === "horizontal" ? "w-full border-t" : "h-full border-l",
 					className
 				)}

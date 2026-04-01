@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/cn";
 
 const progressVariants = cva(
-	"w-full bg-neutral-200 rounded-full overflow-hidden",
+	"w-full bg-background-muted rounded-full overflow-hidden",
 	{
 		variants: {
 			variant: {

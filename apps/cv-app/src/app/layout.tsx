@@ -3,7 +3,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-	title: "CV - John Doe",
+	title: "CV - Ivan Isaev",
 	description: "Personal CV and Portfolio",
 };
 

@@ -41,7 +41,7 @@ Automatically deploys Storybook to GitHub Pages on push to `main`.
 3. Deploys to GitHub Pages
 4. Provides deployment URL
 
-**Access:** `https://[your-username].github.io/ui-component-lib/`
+**Access:** `https://ivanisaev-12.github.io/ui-component-lib/`
 
 #### **c) npm Publishing** (`.github/workflows/publish.yml`)
 
@@ -187,7 +187,7 @@ MIT License added at `packages/ui/LICENSE`.
 2. Source: Select **"GitHub Actions"**
 3. Save
 
-Your Storybook will be available at: `https://[username].github.io/ui-component-lib/`
+Your Storybook will be available at: `https://ivanisaev-12.github.io/ui-component-lib/`
 
 #### 2. Add npm Token for Publishing
 
@@ -214,27 +214,21 @@ For test coverage reporting:
 3. Get your token
 4. Add as GitHub secret: `CODECOV_TOKEN`
 
-### Update Repository URLs
+### Repository URLs
 
-Replace placeholder URLs in:
-
-1. **`packages/ui/package.json`:**
+Repository URLs are already configured in `packages/ui/package.json`:
 
    ```json
-   "homepage": "https://github.com/YOUR_USERNAME/ui-component-lib#readme",
+   "homepage": "https://github.com/IvanIsaev-12/UI-Component-Library#readme",
    "repository": {
-     "url": "https://github.com/YOUR_USERNAME/ui-component-lib.git"
+     "url": "https://github.com/IvanIsaev-12/UI-Component-Library.git"
    },
    "bugs": {
-     "url": "https://github.com/YOUR_USERNAME/ui-component-lib/issues"
-   }
-   ```
-
-2. **`packages/ui/package.json`** - Author info:
-   ```json
+     "url": "https://github.com/IvanIsaev-12/UI-Component-Library/issues"
+   },
    "author": {
-     "name": "Your Name",
-     "email": "your.email@example.com"
+     "name": "Ivan Isaev",
+     "email": "pochta_cheloveka@yahoo.com"
    }
    ```
 

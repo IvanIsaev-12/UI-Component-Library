@@ -11,7 +11,7 @@ describe("Badge", () => {
 	it.each([
 		["success", "bg-success-200"],
 		["warning", "bg-warning-200"],
-		["neutral", "bg-neutral-200"],
+		["neutral", "bg-background-muted"],
 		["danger", "bg-danger-200"],
 	])("renders %s variant correctly", (variant, expectedClass) => {
 		render(<Badge variant={variant as any}>{variant}</Badge>);

@@ -27,7 +27,7 @@ const CardDescription = ({
 	...props
 }: React.HTMLAttributes<HTMLParagraphElement>) => (
 	<p
-		className={cn("text-sm text-neutral-500 dark:text-neutral-400", className)}
+		className={cn("text-sm text-foreground-muted", className)}
 		{...props}
 	/>
 );

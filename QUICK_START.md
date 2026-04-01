@@ -4,8 +4,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ui-component-lib.git
-cd ui-component-lib
+git clone https://github.com/IvanIsaev-12/UI-Component-Library.git
+cd UI-Component-Library
 
 # Install dependencies
 pnpm install
@@ -270,7 +270,7 @@ rm -rf node_modules/.cache/turbo
 - **Contributing Guide**: [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)
 - **Publishing Guide**: [PUBLISHING.md](./PUBLISHING.md)
 - **CI/CD Setup**: [CI_CD_SETUP.md](./CI_CD_SETUP.md)
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/ui-component-lib/issues)
+- **GitHub Issues**: [Create an issue](https://github.com/IvanIsaev-12/UI-Component-Library/issues)
 
 ## Next Steps
 

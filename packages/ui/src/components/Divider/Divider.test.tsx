@@ -18,7 +18,7 @@ describe("Divider", () => {
 
 		const divider = screen.getByRole("separator");
 		expect(divider).toHaveClass("w-full", "border-t");
-		expect(divider).toHaveClass("border-neutral-300");
+		expect(divider).toHaveClass("border-border");
 	});
 
 	it("renders vertical orientation", () => {
@@ -33,7 +33,7 @@ describe("Divider", () => {
 
 		const divider = screen.getByRole("separator");
 		expect(divider).toHaveClass("custom-divider");
-		expect(divider).toHaveClass("border-neutral-300");
+		expect(divider).toHaveClass("border-border");
 	});
 
 	it("has no a11y violations", async () => {

@@ -40,7 +40,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
 					alt={alt}
 					className="h-full w-full object-cover"
 				/>
-				<AvatarPrimitive.Fallback className="flex h-full w-full justify-center items-center bg-neutral-300 text-neutral-700 font-medium">
+				<AvatarPrimitive.Fallback className="flex h-full w-full justify-center items-center bg-background-muted text-foreground-muted font-medium">
 					{fallback}
 				</AvatarPrimitive.Fallback>
 			</AvatarPrimitive.Root>

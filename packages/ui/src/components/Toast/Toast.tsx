@@ -11,7 +11,7 @@ const toastVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 border-neutral-200 dark:border-neutral-700",
+					"bg-background-muted text-foreground border-border",
 				success:
 					"bg-success-100 dark:bg-success-900 text-success-800 dark:text-success-100 border-success-200 dark:border-success-800",
 				error:

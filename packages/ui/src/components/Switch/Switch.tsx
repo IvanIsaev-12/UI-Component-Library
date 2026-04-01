@@ -4,7 +4,7 @@ import { cn } from "../../lib/cn";
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 
 const switchVariants = cva(
-	"relative inline-flex items-center shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=unchecked]:bg-neutral-300",
+	"relative inline-flex items-center shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=unchecked]:bg-border-muted dark:data-[state=unchecked]:bg-border",
 	{
 		variants: {
 			size: {

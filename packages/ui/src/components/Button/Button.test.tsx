@@ -15,7 +15,7 @@ describe("Button", () => {
 	it("renders with secondary variant", () => {
 		render(<Button variant="secondary">Click me</Button>);
 		const button = screen.getByRole("button", { name: /click me/i });
-		expect(button.className).toContain("bg-neutral-100");
+		expect(button.className).toContain("bg-background-muted");
 	});
 
 	it("renders in loading state", () => {

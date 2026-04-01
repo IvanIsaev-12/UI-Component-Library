@@ -368,4 +368,4 @@ This is a thesis project. For questions or contributions, please open an issue o
 
 ## Documentation
 
-For full documentation and interactive examples, visit our [Storybook](https://your-storybook-url.vercel.app).
+For full documentation and interactive examples, visit our [Storybook](https://ivanisaev-12.github.io/ui-component-lib/).

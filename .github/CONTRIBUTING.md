@@ -6,17 +6,17 @@ Thank you for your interest in contributing! This document provides guidelines f
 
 ### Prerequisites
 
-- Node.js 20+
-- pnpm 8+
+- Node.js 18+
+- pnpm 10+
 - Git
 
 ### Setup Development Environment
 
 1. Clone the repository:
 
-   ```
-   git clone https://github.com/yourusername/ui-component-lib.git
-   cd ui-component-lib
+   ```bash
+   git clone https://github.com/IvanIsaev-12/UI-Component-Library.git
+   cd UI-Component-Library
    ```
 
 2. Install dependencies:
