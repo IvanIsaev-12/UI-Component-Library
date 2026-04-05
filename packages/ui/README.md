@@ -358,6 +358,16 @@ export default function ClientComponent() {
 }
 ```
 
+## Acknowledgments
+
+This library builds upon excellent open-source projects:
+
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible, unstyled component primitives (MIT License)
+- **[shadcn/ui](https://ui.shadcn.com/)** - Design inspiration and component API patterns (MIT License)
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework (MIT License)
+
+This library adapts the Radix + Tailwind approach pioneered by shadcn/ui into a traditional npm package format, specifically optimized for Next.js 15 and React 19.
+
 ## License
 
 MIT

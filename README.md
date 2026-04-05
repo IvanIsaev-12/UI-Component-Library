@@ -247,6 +247,21 @@ npm publish
 - **100% TypeScript** - Full type safety
 - **Accessibility Tested** - All components tested with jest-axe
 
+## 🙏 Acknowledgments
+
+This project builds upon open-source work:
+
+- **[Radix UI](https://www.radix-ui.com/)** - Accessible component primitives (MIT License)
+- **[shadcn/ui](https://ui.shadcn.com/)** - Design inspiration and component patterns (MIT License)
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework (MIT License)
+
+While inspired by shadcn/ui's Radix + Tailwind approach, this library differs by:
+- Publishing as an npm package
+- Monorepo architecture with demo applications
+- Optimized for Next.js 15 + React 19
+- Complete CI/CD pipeline with automated testing and deployment
+- Custom semantic design token system
+
 ## 📄 License
 
 MIT License - See LICENSE file for details
