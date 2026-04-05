@@ -41,7 +41,7 @@ Automatically deploys Storybook to GitHub Pages on push to `main`.
 3. Deploys to GitHub Pages
 4. Provides deployment URL
 
-**Access:** `https://ivanisaev-12.github.io/ui-component-lib/`
+**Access:** `https://ivanisaev-12.github.io/UI-Component-Library/`
 
 #### **c) npm Publishing** (`.github/workflows/publish.yml`)
 
@@ -187,7 +187,7 @@ MIT License added at `packages/ui/LICENSE`.
 2. Source: Select **"GitHub Actions"**
 3. Save
 
-Your Storybook will be available at: `https://ivanisaev-12.github.io/ui-component-lib/`
+Your Storybook will be available at: `https://ivanisaev-12.github.io/UI-Component-Library/`
 
 #### 2. Add npm Token for Publishing
 
@@ -367,7 +367,7 @@ git push origin test/ci-pipeline
 git push origin main
 
 # Check Actions tab for deployment
-# Visit https://[username].github.io/ui-component-lib/
+# Visit https://ivanisaev-12.github.io/UI-Component-Library/
 ```
 
 ### 3. Test Package Build

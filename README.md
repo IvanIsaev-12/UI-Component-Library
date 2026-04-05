@@ -254,7 +254,7 @@ MIT License - See LICENSE file for details
 ## 🔗 Links
 
 - [Component Library Package](./packages/ui)
-- [Storybook Documentation](https://ivanisaev-12.github.io/ui-component-lib/) _(Auto-deployed from dev branch)_
+- [Storybook Documentation](https://ivanisaev-12.github.io/UI-Component-Library/) _(Auto-deployed from main branch)_
 - [npm Package](https://www.npmjs.com/package/@ui-component-lib/ui)
 - [GitHub Repository](https://github.com/IvanIsaev-12/UI-Component-Library)
 
