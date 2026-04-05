@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-04-05
+
+### Added
+
+- **Design Token System** - Enhanced semantic color tokens for better theming
+  - Added `--color-danger` token for both light and dark modes
+  - Improved semantic color consistency across all components
+
+### Changed
+
+- **Component Theming Improvements** - Updated 23 components to use semantic design tokens:
+  - `Input` - Now uses `foreground-muted`, `placeholder`, and `danger` tokens
+  - `Select` - Consistent token usage across all sub-components (Trigger, Content, Item, Label, Separator)
+  - `Badge`, `Button`, `Accordion`, `Alert`, `Avatar`, `Breadcrumb`, `Card`, `Checkbox`, `Dialog`, `Divider`, `Popover`, `Progress`, `Radio`, `Skeleton`, `Switch`, `Toast`, `Tooltip` - All updated for better theming consistency
+
+- **Accessibility Enhancements**
+  - `Input` - Improved ARIA attributes with better error and tip handling
+  - `Select` - Better development-time accessibility warnings
+
+### Fixed
+
+- **Documentation** - Updated Storybook URLs to correct repository naming (UI-Component-Library)
+- **Styling** - Improved dark mode color consistency across components
+
 ## [1.0.0] - 2026-03-27
 
 ### Added
