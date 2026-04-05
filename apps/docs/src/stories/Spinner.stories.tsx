@@ -1,12 +1,31 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Spinner, Button, Card } from "@ui-component-lib/ui";
 
-const meta: Meta<typeof Spinner> = {
+const meta = {
 	title: "Feedback/Spinner",
 	component: Spinner,
 	tags: ["autodocs"],
-};
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"An animated loading indicator used to communicate that content or data is being fetched. Available in small, medium, and large sizes.",
+			},
+		},
+	},
+	argTypes: {
+		size: {
+			control: "select",
+			options: ["sm", "md", "lg"],
+			description: "The size of the spinner",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "md" },
+			},
+		},
+	},
+} satisfies Meta<typeof Spinner>;
 
 export default meta;
 
@@ -21,6 +40,13 @@ export const Sizes: Story = {
 				<Spinner size="lg" />
 			</div>
 		);
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "All three available sizes shown side by side: small, medium, and large.",
+			},
+		},
 	},
 };
 
@@ -56,6 +82,13 @@ export const LoadingButton: Story = {
 				</p>
 			</div>
 		);
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Spinner embedded inside a button to indicate an async operation is in progress.",
+			},
+		},
 	},
 };
 
@@ -102,5 +135,12 @@ export const DataFetching: Story = {
 				)}
 			</Card>
 		);
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Full card loading pattern — spinner replaces content while data is fetched, then reveals the result.",
+			},
+		},
 	},
 };

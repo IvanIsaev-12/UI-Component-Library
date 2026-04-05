@@ -12,6 +12,13 @@ const meta = {
 	title: "Components/Tabs",
 	component: Tabs,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component: "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+			},
+		},
+	},
 } satisfies Meta<typeof Tabs>;
 
 export default meta;
@@ -19,6 +26,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The default tabs implementation featuring nested form components, demonstrating how tabs can effectively organize complex user settings.",
+			},
+		},
+	},
 	render: () => (
 		<Tabs defaultValue="account" className="">
 			<TabsList className="w-[450px]">
@@ -69,6 +83,13 @@ export const Default: Story = {
 };
 
 export const Compact: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A clean, compact version of the tabs used for switching between high-level dashboard views like analytics and reporting.",
+			},
+		},
+	},
 	render: () => (
 		<Tabs defaultValue="overview" className="w-[450px]">
 			<TabsList className="w-[450px]">
@@ -102,6 +123,13 @@ export const Compact: Story = {
 };
 
 export const WithDisabled: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Shows the `disabled` state on individual `TabsTrigger` elements, preventing users from accessing specific sections based on permissions or logic.",
+			},
+		},
+	},
 	render: () => (
 		<Tabs defaultValue="available" className="w-full max-w-md">
 			<TabsList className="w-full">
@@ -125,6 +153,13 @@ export const WithDisabled: Story = {
 };
 
 export const ManyTabs: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates the behavior and layout of the `TabsList` when a large number of options are present.",
+			},
+		},
+	},
 	render: () => (
 		<Tabs defaultValue="home" className="w-full max-w-2xl">
 			<TabsList>

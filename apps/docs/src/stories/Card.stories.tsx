@@ -14,6 +14,14 @@ const meta = {
 	title: "Components/Card",
 	component: Card,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A flexible container component composed of Card, CardHeader, CardTitle, CardDescription, CardContent, and CardFooter. Use it to group related information into a visually distinct surface.",
+			},
+		},
+	},
 } satisfies Meta<typeof Card>;
 
 export default meta;
@@ -37,7 +45,15 @@ export const Default: Story = {
 			</Card>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A complete card with header, description, content, and footer.",
+			},
+		},
+	},
 };
+
 export const NoFooter: Story = {
 	render: () => (
 		<div className="max-w-md">
@@ -53,6 +69,13 @@ export const NoFooter: Story = {
 			</Card>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Card without a footer — suitable for informational content that needs no action.",
+			},
+		},
+	},
 };
 
 export const Grid: Story = {
@@ -89,7 +112,15 @@ export const Grid: Story = {
 			</div>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Cards arranged in a responsive three-column grid — a common dashboard metric pattern.",
+			},
+		},
+	},
 };
+
 export const WithButton: Story = {
 	render: () => (
 		<div className="max-w-md">
@@ -109,4 +140,11 @@ export const WithButton: Story = {
 			</Card>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Card with action buttons in the footer — ideal for confirmation dialogs or task cards.",
+			},
+		},
+	},
 };

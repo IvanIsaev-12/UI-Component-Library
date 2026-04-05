@@ -15,6 +15,13 @@ const meta = {
 	title: "Components/Select",
 	component: Select,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component: "A form control that allows users to choose one or more options from a collapsible list.",
+			},
+		},
+	},
 } satisfies Meta<typeof Select>;
 
 export default meta;
@@ -22,6 +29,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The standard select input providing a scrollable list of options for a user to choose from.",
+			},
+		},
+	},
 	render: () => (
 		<Select>
 			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
@@ -39,6 +53,13 @@ export const Default: Story = {
 };
 
 export const WithGroups: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Uses `SelectGroup` and `SelectLabel` to categorize related options, making long lists easier to navigate.",
+			},
+		},
+	},
 	render: () => (
 		<Select>
 			<SelectTrigger className="w-[280px]" aria-label="Select a timezone">
@@ -65,6 +86,13 @@ export const WithGroups: Story = {
 };
 
 export const WithDefaultValue: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates how to set an initial selected value using the `defaultValue` prop.",
+			},
+		},
+	},
 	render: () => (
 		<Select defaultValue="banana">
 			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
@@ -81,6 +109,13 @@ export const WithDefaultValue: Story = {
 };
 
 export const Disabled: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The state of the component when the entire interaction is disabled, preventing the menu from opening.",
+			},
+		},
+	},
 	render: () => (
 		<Select disabled>
 			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
@@ -96,6 +131,13 @@ export const Disabled: Story = {
 };
 
 export const WithDisabledItems: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Shows how to disable specific items within the list while keeping the rest of the menu interactive.",
+			},
+		},
+	},
 	render: () => (
 		<Select>
 			<SelectTrigger className="w-[280px]" aria-label="Select a fruit">
@@ -117,6 +159,13 @@ export const WithDisabledItems: Story = {
 };
 
 export const FormExample: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A controlled component example where the selected value is managed via state and paired with a label.",
+			},
+		},
+	},
 	render: () => {
 		const [country, setCountry] = React.useState("");
 
@@ -152,6 +201,13 @@ export const FormExample: Story = {
 };
 
 export const LongList: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Testing the scrollable behavior of the popover content when the list exceeds the viewport height.",
+			},
+		},
+	},
 	render: () => (
 		<Select>
 			<SelectTrigger className="w-[280px]" aria-label="Select a country">
@@ -179,6 +235,13 @@ export const LongList: Story = {
 };
 
 export const MultipleSelects: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A layout showing multiple select inputs together, typical of a product configuration or filter bar.",
+			},
+		},
+	},
 	render: () => (
 		<div className="space-y-4">
 			<div className="w-[280px]">

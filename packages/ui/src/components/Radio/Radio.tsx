@@ -30,7 +30,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
 	({ className, label, size, id, ...props }, ref) => {
 		const radioId = id || React.useId();
 		return (
-			<div className=" flex items-center gap-2">
+			<div className="flex items-center gap-2">
 				<input
 					type="radio"
 					ref={ref}

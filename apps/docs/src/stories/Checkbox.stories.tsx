@@ -6,6 +6,31 @@ const meta = {
 	title: "Primitives/Checkbox",
 	component: Checkbox,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A controlled or uncontrolled checkbox input with an optional visible label. Fully keyboard accessible and supports a disabled state.",
+			},
+		},
+	},
+	argTypes: {
+		label: {
+			control: "text",
+			description: "Text label displayed next to the checkbox",
+			table: { type: { summary: "string" } },
+		},
+		id: {
+			control: "text",
+			description: "HTML id used to associate the label with the input",
+			table: { type: { summary: "string" } },
+		},
+		disabled: {
+			control: "boolean",
+			description: "Prevents the checkbox from being toggled",
+			table: { type: { summary: "boolean" }, defaultValue: { summary: "false" } },
+		},
+	},
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -17,6 +42,13 @@ export const Default: Story = {
 		label: "Vote !",
 		id: "vote",
 	},
+	parameters: {
+		docs: {
+			description: {
+				story: "A basic checkbox with a label — the most common usage.",
+			},
+		},
+	},
 };
 
 export const Disabled: Story = {
@@ -24,6 +56,13 @@ export const Disabled: Story = {
 		label: "This option is disabled by default",
 		id: "disabled",
 		disabled: true,
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "A disabled checkbox that cannot be toggled by the user.",
+			},
+		},
 	},
 };
 
@@ -35,6 +74,13 @@ export const Grid: Story = {
 			<Checkbox label="Candidate 3" id="grid-candidate-3" />
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Checkboxes arranged in a responsive grid — useful for multi-column option lists.",
+			},
+		},
+	},
 };
 
 export const TermsAndConditions: Story = {
@@ -43,6 +89,13 @@ export const TermsAndConditions: Story = {
 			<Checkbox label="I agree to the Terms and Conditions" id="terms" />
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Single checkbox used as a required acceptance control for legal agreements.",
+			},
+		},
+	},
 };
 
 export const MultiSelect: Story = {
@@ -57,4 +110,11 @@ export const MultiSelect: Story = {
 			</div>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A vertical list of checkboxes for selecting multiple options from a set.",
+			},
+		},
+	},
 };

@@ -1,12 +1,38 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Alert, AlertTitle, AlertDescription } from "@ui-component-lib/ui";
 
-const meta: Meta<typeof Alert> = {
+const meta = {
 	title: "Components/Alert",
 	component: Alert,
 	tags: ["autodocs"],
-};
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"Displays a short, important message that attracts the user's attention without interrupting their task. Supports info, success, warning, and danger variants.",
+			},
+		},
+	},
+	argTypes: {
+		variant: {
+			control: "select",
+			options: ["info", "success", "warning", "danger"],
+			description: "The visual style and semantic meaning of the alert",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "info" },
+			},
+		},
+		children: {
+			control: false,
+			description: "Content inside the alert — typically AlertTitle and AlertDescription",
+			table: {
+				type: { summary: "ReactNode" },
+			},
+		},
+	},
+} satisfies Meta<typeof Alert>;
 
 export default meta;
 
@@ -22,6 +48,13 @@ export const Info: Story = {
 			</>
 		),
 	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Default informational alert for neutral, helpful messages.",
+			},
+		},
+	},
 };
 
 export const Success: Story = {
@@ -35,6 +68,13 @@ export const Success: Story = {
 				</AlertDescription>
 			</>
 		),
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Use to confirm that an operation completed without errors.",
+			},
+		},
 	},
 };
 
@@ -50,6 +90,13 @@ export const Warning: Story = {
 			</>
 		),
 	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Use to caution the user before proceeding with a potentially risky action.",
+			},
+		},
+	},
 };
 
 export const Danger: Story = {
@@ -63,5 +110,12 @@ export const Danger: Story = {
 				</AlertDescription>
 			</>
 		),
+	},
+	parameters: {
+		docs: {
+			description: {
+				story: "Use to communicate a critical error or failed operation.",
+			},
+		},
 	},
 };

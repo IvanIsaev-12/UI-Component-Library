@@ -9,10 +9,19 @@ import {
 	BreadcrumbSeparator,
 } from "@ui-component-lib/ui";
 import { Slash } from "lucide-react";
+
 const meta = {
 	title: "Components/Breadcrumb",
 	component: Breadcrumb,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A navigation aid that displays the current page's location within a hierarchy. It allows users to track their path and navigate back to parent levels via a sequence of links.",
+			},
+		},
+	},
 } satisfies Meta<typeof Breadcrumb>;
 
 export default meta;
@@ -20,6 +29,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The standard breadcrumb structure using text links and default chevron separators.",
+			},
+		},
+	},
 	render: () => (
 		<Breadcrumb>
 			<BreadcrumbList>
@@ -40,6 +56,13 @@ export const Default: Story = {
 };
 
 export const WithCustomSeparator: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates how to replace the default separator with a custom icon, such as a forward slash.",
+			},
+		},
+	},
 	render: () => (
 		<div className="space-y-4">
 			<Breadcrumb id="nav-1">
@@ -64,7 +87,15 @@ export const WithCustomSeparator: Story = {
 		</div>
 	),
 };
+
 export const LongPath: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "An example of the breadcrumb behavior when dealing with deeply nested page hierarchies.",
+			},
+		},
+	},
 	render: () => (
 		<Breadcrumb>
 			<BreadcrumbList>

@@ -6,6 +6,50 @@ const meta = {
 	title: "Primitives/Switch",
 	component: Switch,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A toggle control that switches between on and off states. Supports multiple sizes and color variants, and is fully accessible via keyboard.",
+			},
+		},
+	},
+	argTypes: {
+		size: {
+			control: "select",
+			options: ["sm", "md", "lg"],
+			description: "The size of the switch",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "md" },
+			},
+		},
+		variant: {
+			control: "select",
+			options: ["primary", "success", "warning", "danger"],
+			description: "The color variant applied when the switch is checked",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "primary" },
+			},
+		},
+		disabled: {
+			control: "boolean",
+			description: "Prevents interaction when true",
+			table: {
+				type: { summary: "boolean" },
+				defaultValue: { summary: "false" },
+			},
+		},
+		defaultChecked: {
+			control: "boolean",
+			description: "Whether the switch is checked by default (uncontrolled)",
+			table: {
+				type: { summary: "boolean" },
+				defaultValue: { summary: "false" },
+			},
+		},
+	},
 } satisfies Meta<typeof Switch>;
 
 export default meta;
@@ -27,6 +71,13 @@ export const Default: Story = {
 			</label>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A standard switch with a label — the most common usage pattern.",
+			},
+		},
+	},
 };
 
 export const Sizes: Story = {
@@ -52,6 +103,13 @@ export const Sizes: Story = {
 			</div>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "All three switch sizes shown together for comparison.",
+			},
+		},
+	},
 };
 
 export const Disabled: Story = {
@@ -71,6 +129,13 @@ export const Disabled: Story = {
 			</div>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Disabled switches are not interactive and visually muted — shown in both on and off states.",
+			},
+		},
+	},
 };
 
 export const Colors: Story = {
@@ -102,4 +167,11 @@ export const Colors: Story = {
 			</div>
 		</div>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "All color variants shown in the checked state to illustrate the available palette.",
+			},
+		},
+	},
 };
