@@ -160,7 +160,7 @@ Storybook automatically deploys to GitHub Pages on every push to `dev` branch:
    ```
 
 3. **Access Storybook**:
-   - URL: `https://ivanisaev-12.github.io/ui-component-lib/`
+   - URL: `https://ivanisaev-12.github.io/UI-Component-Library/`
 
 ### Manual Deployment
 
