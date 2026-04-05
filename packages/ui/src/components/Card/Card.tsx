@@ -59,7 +59,7 @@ const Card = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		className={cn(
-			"p-6  bg-background-muted border border-border rounded-xl shadow-sm ",
+			"p-6 bg-background-muted border border-border rounded-xl shadow-sm",
 			className
 		)}
 		{...props}

@@ -1,18 +1,32 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Radio, Card } from "@ui-component-lib/ui";
 
-const meta: Meta<typeof Radio> = {
+const meta = {
 	title: "Primitives/Radio",
 	component: Radio,
 	tags: ["autodocs"],
-};
+	parameters: {
+		docs: {
+			description: {
+				component: "A set of checkable inputs where only one option can be selected at a time.",
+			},
+		},
+	},
+} satisfies Meta<typeof Radio>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A standard group of radio buttons allowing users to select a single option from a list.",
+			},
+		},
+	},
 	render: () => (
 		<div className="space-y-3">
 			<Radio name="gender" label="Female" size="md" />
@@ -23,6 +37,13 @@ export const Default: Story = {
 };
 
 export const DifferentSizes: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Shows the available size variations (`sm`, `md`, `lg`) to ensure the input matches the surrounding typography and density.",
+			},
+		},
+	},
 	render: () => (
 		<div className="space-y-4">
 			<div>
@@ -51,6 +72,13 @@ export const DifferentSizes: Story = {
 };
 
 export const SubscriptionPlan: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A complex real-world example using radio buttons inside custom card-like labels for rich selection states.",
+			},
+		},
+	},
 	render: () => {
 		const [plan, setPlan] = React.useState("pro");
 

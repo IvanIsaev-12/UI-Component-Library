@@ -10,7 +10,16 @@ import {
 
 const meta = {
 	title: "Components/Accordion",
+	component: Accordion,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A vertically stacked set of interactive headings that each reveal an associated section of content. Supports single-open and multiple-open modes.",
+			},
+		},
+	},
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -32,7 +41,15 @@ export const Single: Story = {
 			</AccordionItem>
 		</Accordion>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A single-item accordion — clicking the trigger reveals or hides the content.",
+			},
+		},
+	},
 };
+
 export const MultipleSingle: Story = {
 	render: () => (
 		<Accordion type="single" collapsible className="w-[600px]">
@@ -56,7 +73,15 @@ export const MultipleSingle: Story = {
 			</AccordionItem>
 		</Accordion>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Multiple items in single mode — only one item can be open at a time.",
+			},
+		},
+	},
 };
+
 export const MultipleOpen: Story = {
 	render: () => (
 		<Accordion type="multiple" className="w-[600px]">
@@ -79,6 +104,13 @@ export const MultipleOpen: Story = {
 			</AccordionItem>
 		</Accordion>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Multiple mode — several items can be open simultaneously.",
+			},
+		},
+	},
 };
 
 export const FAQ: Story = {
@@ -156,4 +188,11 @@ export const FAQ: Story = {
 			</AccordionItem>
 		</Accordion>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A realistic FAQ section demonstrating the accordion in a common real-world layout.",
+			},
+		},
+	},
 };

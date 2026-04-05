@@ -12,6 +12,13 @@ const meta = {
 	title: "Components/Popover",
 	component: Popover,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component: "A non-modal floating view that displays rich content related to a specific trigger element.",
+			},
+		},
+	},
 } satisfies Meta<typeof Popover>;
 
 export default meta;
@@ -19,6 +26,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The standard popover used to display additional information when a user interacts with a trigger element.",
+			},
+		},
+	},
 	render: () => (
 		<Popover>
 			<PopoverTrigger asChild>
@@ -38,6 +52,13 @@ export const Default: Story = {
 };
 
 export const WithForm: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Popovers can house small forms for quick configuration tasks, such as adjusting dimensions or settings without leaving the page context.",
+			},
+		},
+	},
 	render: () => (
 		<Popover>
 			<PopoverTrigger asChild>
@@ -82,6 +103,13 @@ export const WithForm: Story = {
 };
 
 export const DifferentSides: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates the `side` property, allowing the popover to anchor to the top, right, bottom, or left of the trigger.",
+			},
+		},
+	},
 	render: () => (
 		<div className="flex gap-4 items-center justify-center h-64">
 			<Popover>
@@ -124,6 +152,13 @@ export const DifferentSides: Story = {
 };
 
 export const CustomWidth: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Using `className`, you can override the default width to accommodate larger blocks of text or more complex layouts.",
+			},
+		},
+	},
 	render: () => (
 		<Popover>
 			<PopoverTrigger asChild>
@@ -141,7 +176,15 @@ export const CustomWidth: Story = {
 		</Popover>
 	),
 };
+
 export const WithCheckbox: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A popover containing a multi-selection list using checkboxes, useful for filtering or quick tagging.",
+			},
+		},
+	},
 	render: () => (
 		<Popover>
 			<PopoverTrigger asChild>
@@ -159,6 +202,13 @@ export const WithCheckbox: Story = {
 };
 
 export const WithList: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "An example of using a list within a popover for utility menus or quick action links.",
+			},
+		},
+	},
 	render: () => (
 		<Popover>
 			<PopoverTrigger asChild>

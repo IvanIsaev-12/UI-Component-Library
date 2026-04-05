@@ -16,6 +16,13 @@ const meta = {
 	title: "Components/Table",
 	component: Table,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component: "Organizes and displays data efficiently across rows and columns for easy scanning and comparison.",
+			},
+		},
+	},
 } satisfies Meta<typeof Table>;
 
 export default meta;
@@ -57,6 +64,13 @@ export const Default: Story = {
 			</TableBody>
 		</Table>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "A basic table structure featuring a header, body rows, and a descriptive caption.",
+			},
+		},
+	},
 };
 
 export const WithFooter: Story = {
@@ -100,6 +114,13 @@ export const WithFooter: Story = {
 			</TableFooter>
 		</Table>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates the use of `TableFooter` to display summary data, such as totals or averages, at the bottom of the dataset.",
+			},
+		},
+	},
 };
 
 export const WithBadges: Story = {
@@ -147,4 +168,11 @@ export const WithBadges: Story = {
 			</TableBody>
 		</Table>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "An example of a rich data table integrating **Badge** components to visualize statuses and improve scannability.",
+			},
+		},
+	},
 };

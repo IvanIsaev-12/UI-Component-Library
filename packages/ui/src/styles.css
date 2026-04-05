@@ -91,6 +91,9 @@
 	/* Semantic placeholder colors */
 	--color-placeholder: #a1a1aa;
 
+	/* Semantic danger color */
+	--color-danger: #dc2626; 
+
 	/* Animation Definitions */
 	--animate-accordion-down: accordion-down 0.3s ease-out;
 	--animate-accordion-up: accordion-up 0.3s ease-out;
@@ -186,4 +189,6 @@
 	--color-border-muted: #52525b;
 
 	--color-placeholder: #71717a;
+
+	--color-danger: #ef4444;
 }

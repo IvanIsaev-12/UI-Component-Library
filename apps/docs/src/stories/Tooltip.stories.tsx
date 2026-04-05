@@ -12,6 +12,14 @@ const meta = {
 	title: "Primitives/Tooltip",
 	component: Tooltip,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A floating label that appears on hover or focus to provide additional context for an element. Built on Radix UI with full keyboard and screen-reader support.",
+			},
+		},
+	},
 } satisfies Meta<typeof Tooltip>;
 
 export default meta;
@@ -31,6 +39,13 @@ export const Default: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Basic tooltip that appears above the trigger by default.",
+			},
+		},
+	},
 };
 
 export const Top: Story = {
@@ -46,6 +61,13 @@ export const Top: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip explicitly positioned above the trigger element.",
+			},
+		},
+	},
 };
 
 export const Right: Story = {
@@ -61,6 +83,13 @@ export const Right: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip positioned to the right of the trigger.",
+			},
+		},
+	},
 };
 
 export const Bottom: Story = {
@@ -76,6 +105,13 @@ export const Bottom: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip positioned below the trigger element.",
+			},
+		},
+	},
 };
 
 export const Left: Story = {
@@ -91,6 +127,13 @@ export const Left: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip positioned to the left of the trigger.",
+			},
+		},
+	},
 };
 
 export const WithCustomDelay: Story = {
@@ -106,6 +149,13 @@ export const WithCustomDelay: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Setting delayDuration to 0 on TooltipProvider removes the hover delay.",
+			},
+		},
+	},
 };
 
 export const WithArrow: Story = {
@@ -121,6 +171,13 @@ export const WithArrow: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip with a visible arrow pointing at the trigger element.",
+			},
+		},
+	},
 };
 
 export const WithLongerContent: Story = {
@@ -139,4 +196,11 @@ export const WithLongerContent: Story = {
 			</Tooltip>
 		</TooltipProvider>
 	),
+	parameters: {
+		docs: {
+			description: {
+				story: "Tooltip constrained to a max width to wrap longer text gracefully.",
+			},
+		},
+	},
 };

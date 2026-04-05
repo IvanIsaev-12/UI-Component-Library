@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/cn";
 
@@ -28,7 +27,7 @@ const AlertTitle = ({
 	...props
 }: React.HTMLAttributes<HTMLParagraphElement>) => (
 	<p
-		className={cn("font-semibold text-base leading'tight", className)}
+		className={cn("font-semibold text-base leading-tight", className)}
 		{...props}
 	/>
 );

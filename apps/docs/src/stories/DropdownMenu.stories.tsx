@@ -21,6 +21,13 @@ const meta = {
 	title: "Components/DropdownMenu",
 	component: DropdownMenu,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component: "Displays a list of actions or options to a user, triggered by a button or interactive element.",
+			},
+		},
+	},
 } satisfies Meta<typeof DropdownMenu>;
 
 export default meta;
@@ -28,6 +35,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "The standard dropdown menu containing a list of basic navigation or action items.",
+			},
+		},
+	},
 	render: () => (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -46,6 +60,13 @@ export const Default: Story = {
 };
 
 export const WithShortcuts: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Displays keyboard shortcuts alongside menu items to aid power users with navigation.",
+			},
+		},
+	},
 	render: () => (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -77,6 +98,13 @@ export const WithShortcuts: Story = {
 };
 
 export const WithCheckboxes: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Features checkbox items to allow toggling multiple independent settings or visibility options.",
+			},
+		},
+	},
 	render: () => {
 		const [showStatusBar, setShowStatusBar] = React.useState(true);
 		const [showActivityBar, setShowActivityBar] = React.useState(false);
@@ -118,6 +146,13 @@ export const WithCheckboxes: Story = {
 };
 
 export const WithRadioGroup: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Uses a radio group to ensure only one option can be selected from a specific set of items.",
+			},
+		},
+	},
 	render: () => {
 		const [position, setPosition] = React.useState("bottom");
 
@@ -141,6 +176,13 @@ export const WithRadioGroup: Story = {
 };
 
 export const WithSubmenu: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "An example of nested menus (submenus) used to categorize and organize secondary actions.",
+			},
+		},
+	},
 	render: () => (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -169,6 +211,13 @@ export const WithSubmenu: Story = {
 };
 
 export const WithDisabledItems: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "Demonstrates the visual state and behavior of menu items that are currently unavailable for interaction.",
+			},
+		},
+	},
 	render: () => (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -204,6 +253,13 @@ export const WithDisabledItems: Story = {
 };
 
 export const UserMenu: Story = {
+	parameters: {
+		docs: {
+			description: {
+				story: "A complex real-world implementation combining labels, submenus, and destructive actions for user account management.",
+			},
+		},
+	},
 	render: () => (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
