@@ -1,6 +1,6 @@
 {
 	"name": "@ui-component-lib/ui",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "module",
 	"description": "A modern, accessible UI component library for Next.js with 25 production-ready components built with React, TypeScript, Radix UI, and Tailwind CSS",
 	"keywords": [
