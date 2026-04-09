@@ -26,7 +26,7 @@ describe("Button", () => {
 		expect(screen.getByText(/loading\.\.\./i)).toBeInTheDocument();
 	});
 
-	it("testing user events", async () => {
+	it("handles user click events", async () => {
 		const endUser = userEvent.setup();
 		const handleClick = vi.fn();
 		render(<Button onClick={handleClick}>Click me</Button>);
@@ -41,7 +41,7 @@ describe("Button", () => {
 		expect(button).toBeDisabled();
 	});
 
-	it("testing a11y violations", async () => {
+	it("has no a11y violations", async () => {
 		const { container } = render(<Button>Click me</Button>);
 		const results = await axe(container);
 		expect(results).toHaveNoViolations();

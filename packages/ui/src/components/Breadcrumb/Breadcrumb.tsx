@@ -1,5 +1,4 @@
 import * as React from "react";
-import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/cn";
 import { ChevronRight } from "lucide-react";
 

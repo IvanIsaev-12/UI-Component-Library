@@ -2,7 +2,7 @@ import * as React from "react";
 import { cn } from "../../lib/cn";
 
 interface DividerProps extends React.HTMLAttributes<HTMLHRElement> {
-	orientation?: "veritcal" | "horizontal";
+	orientation?: "vertical" | "horizontal";
 }
 
 const Divider = React.forwardRef<HTMLHRElement, DividerProps>(
