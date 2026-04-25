@@ -227,8 +227,7 @@ This project demonstrates:
 - **Component Composition** - Flexible, composable component patterns
 - **TypeScript First** - Full type safety and IntelliSense support
 - **Tree-Shakeable** - Import only what you need
-- **Framework Agnostic** - Works with any React framework
-
+- 
 ## 🚢 Publishing
 
 The `@ui-component-lib/ui` package is configured for npm publishing:
